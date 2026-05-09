@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ॐ Bandhas - The Inner Locks</title>
+<meta name="description" content="The three classical bandhas - Mula, Uddiyana, Jalandhara - and their union as Maha Bandha. The inner locks of the advanced practice.">
+<link rel="canonical" href="https://brahmamuhurta.ai/teachings/bandhas">
+<meta property="og:title" content="Bandhas - The Inner Locks">
+<meta property="og:description" content="Mula, Uddiyana, Jalandhara. The inner gateways of the deeper practice.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://brahmamuhurta.ai/teachings/bandhas">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#081530">
+<link rel="apple-touch-icon" href="/icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Brahma Muhurta">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --surface-hi: #15294e;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --gold-bright: #f0d99a;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.18);
+    --glow: rgba(224,198,132,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.85;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .breadcrumb {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: var(--gold-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .breadcrumb a:hover { color: var(--gold); }
+
+  .sanskrit {
+    font-family: serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    line-height: 1.2;
+    animation: shimmer 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  article h2, .om, footer .om, .benediction .om {
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 540px;
+    margin: 1.5rem auto 0;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2.5rem auto;
+  }
+
+  article {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  article h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin: 4rem 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+
+  article h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin: 2.5rem 0 1rem;
+    font-weight: 400;
+  }
+
+  article p {
+    margin-bottom: 1.5rem;
+  }
+
+  article .opening::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    float: left;
+    line-height: 0.85;
+    margin: 0.3rem 0.5rem 0 0;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  article em {
+    color: var(--text);
+    font-style: italic;
+  }
+
+  article .sanskrit-term {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  blockquote.pull-quote {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--gold);
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    max-width: 580px;
+  }
+
+  /* Strong caution */
+  aside.caution-strong {
+    background: rgba(200,90,90,0.05);
+    border: 1px solid #c8866e;
+    border-left-width: 3px;
+    padding: 1.75rem 2rem;
+    margin: 2.5rem 0;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    border-radius: 1px;
+  }
+
+  aside.caution-strong strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #d8a08e;
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+  }
+
+  aside.caution-strong p {
+    margin-bottom: 1rem;
+  }
+
+  aside.caution-strong p:last-child {
+    margin-bottom: 0;
+  }
+
+  aside.note {
+    border-left: 1px solid var(--gold-dim);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-dim);
+    font-style: italic;
+    font-family: 'IM Fell English', serif;
+    font-size: 1rem;
+  }
+
+  /* Bandha card */
+  .bandha {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bandha::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+
+  .bandha-header {
+    text-align: center;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .bandha-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .bandha-sanskrit {
+    font-family: serif;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .bandha-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .bandha-translation {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+  }
+
+  .bandha-section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 1.75rem 0 1rem;
+    font-weight: 400;
+  }
+
+  .bandha p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+
+  .bandha p:last-child {
+    margin-bottom: 0;
+  }
+
+  .bandha em {
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .bandha-steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+    margin: 0.5rem 0 0;
+  }
+
+  .bandha-steps li {
+    counter-increment: step;
+    padding: 1rem 0 1rem 3.5rem;
+    border-bottom: 1px solid rgba(224,198,132,0.06);
+    position: relative;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+  }
+
+  .bandha-steps li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
+
+  .bandha-steps li:last-child {
+    border-bottom: none;
+  }
+
+  .bandha-contra {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(200,90,90,0.04);
+    border-left: 1px solid #c8866e;
+    border-radius: 1px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text);
+  }
+
+  .bandha-contra strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #d8a08e;
+    margin-bottom: 0.4rem;
+    font-weight: 400;
+  }
+
+  /* Maha Bandha gets a special elevated styling */
+  .bandha.maha {
+    background: var(--surface-hi);
+    border-color: var(--gold-dim);
+    margin-top: 4rem;
+  }
+
+  .bandha.maha .bandha-name {
+    color: var(--gold-bright);
+  }
+
+  /* Principles list (used for common mistakes / why a teacher) */
+  ul.principles {
+    list-style: none;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    counter-reset: principle;
+  }
+
+  ul.principles li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text);
+    padding: 1.2rem 0 1.2rem 4rem;
+    border-bottom: 1px solid rgba(224,198,132,0.06);
+    position: relative;
+    counter-increment: principle;
+  }
+
+  ul.principles li::before {
+    content: counter(principle, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
+
+  ul.principles li:last-child {
+    border-bottom: none;
+  }
+
+  ul.principles strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  .benediction {
+    text-align: center;
+    margin: 5rem auto 2rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .benediction p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 0 auto 1rem;
+  }
+
+  .benediction .om {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    display: block;
+  }
+
+  .next-teaching {
+    margin-top: 4rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    text-align: center;
+    background: var(--surface);
+  }
+
+  .next-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .next-teaching a {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .next-teaching a:hover { color: var(--gold-bright); }
+
+  .next-teaching .next-desc {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+  }
+
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  footer .om {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  footer .install-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  footer .install-link:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold-dim);
+  }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.58rem; letter-spacing: 0.18em; }
+    main { padding: 6rem 1.5rem 3rem; }
+    article { font-size: 1.1rem; }
+    .bandha { padding: 1.75rem; }
+    .bandha-steps li { padding-left: 3rem; font-size: 1rem; }
+    ul.principles li { padding-left: 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="/#calculator">The Hour</a></li>
+    <li><a href="/#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/" class="current">Teachings</a></li>
+    <li><a href="/#about">About</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <header class="page-header">
+    <p class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; <a href="/teachings/">Teachings</a></p>
+    <p class="sanskrit">बन्ध</p>
+    <h1>The Bandhas</h1>
+    <p class="subtitle">The inner locks. Three small, deliberate gestures that gather the body's energies and turn them inward, toward the centre.</p>
+    <div class="divider"></div>
+  </header>
+
+  <article>
+
+    <p class="opening">The Sanskrit word <span class="sanskrit-term">bandha</span> means a binding, a lock, a seal. In the classical practice it points at three small, very specific muscular contractions - one at the base of the pelvic floor, one at the abdomen, one at the throat. Each is held briefly and released. Done singly they are quiet refinements. Done together, in their classical union as <span class="sanskrit-term">Maha Bandha</span> - the Great Lock - they are described in the texts as among the most concentrated practices the tradition has ever devised.</p>
+
+    <p>The bandhas are not strange or exotic. They use only the body you already have, only muscles you already use unconsciously every day. The strangeness, if there is any, is in the precision: the deliberate isolation of structures the rest of life keeps mixed and approximate. And in the effect: the way three small contractions, properly joined to the breath and the mind, can do what hours of unfocused practice cannot.</p>
+
+    <p>This page sets out the three classical bandhas in detail. Read it carefully. Then read the cautions twice. The bandhas reward patience and punish haste like few practices in the tradition.</p>
+
+    <aside class="caution-strong">
+      <strong>Read this before you proceed</strong>
+      <p>The bandhas are advanced practices. The classical texts repeatedly insist that they should be learnt directly from a qualified teacher who can observe the body, correct the form, and guide the unfolding. There is good reason for this insistence: bandhas done carelessly can disturb the nervous system, the cardiovascular system, the digestive system, and the mind - not because they are inherently dangerous, but because their precision is invisible to the beginner, and the consequences of imprecision are not.</p>
+      <p>What follows is offered as a careful description, not as a substitute for direct guidance. If you are well, your basic asana and pranayama are stable, you have a teacher, and you know your contraindications, the descriptions here will serve as a useful map. If any of those conditions are not met, treat what follows as background knowledge and seek the practice through the proper channels. The teaching has come down through unbroken lineages of teacher-to-student transmission for a reason. That reason is not gatekeeping. It is care.</p>
+      <p><strong>Universal contraindications</strong> for all bandhas: pregnancy, menstruation, recent abdominal or thoracic surgery, hernia, hiatal hernia, peptic ulcer, severe heart disease, uncontrolled hypertension or hypotension, glaucoma, retinal issues, and any acute illness. Specific bandhas have additional contraindications, listed with each.</p>
+    </aside>
+
+    <h2>What a bandha actually is</h2>
+
+    <p>To understand what the bandhas do, it helps to understand a single idea from the Hatha Yoga tradition: the body has <em>currents</em>. The breath is one of them. The blood is another. But beneath these visible currents, the texts describe subtler ones - the movement of <span class="sanskrit-term">prana</span>, life-force itself, through channels called <span class="sanskrit-term">nadis</span>.</p>
+
+    <p>In ordinary life these currents move outward, spread thin, dissipate. The mind follows them out and is dispersed with them. The bandhas are gates. They close certain channels at the body's apertures - the perineum, the diaphragm, the throat - so that prana cannot flow out the usual ways. Energy that was leaking is conserved. And once conserved, the texts say, it begins to find its true direction: not outward, but inward, and finally upward, along the central channel of the spine, the <span class="sanskrit-term">sushumna</span>.</p>
+
+    <p>This is the deeper reason the bandhas are taught. Not as exercises, not as tone, not as breath-control, but as the gathering inward of a force that ordinary life pours away.</p>
+
+    <h2>The three classical bandhas</h2>
+
+    <p>Each bandha is described first by what it is, then by what it does, then by how it is performed. Read each fully before attempting any.</p>
+
+    <!-- 1. Mula Bandha -->
+    <div class="bandha">
+      <div class="bandha-header">
+        <p class="bandha-num">01</p>
+        <p class="bandha-sanskrit">मूल बन्ध</p>
+        <p class="bandha-name">Mula Bandha</p>
+        <p class="bandha-translation">The root lock</p>
+      </div>
+
+      <p class="bandha-section-label">What it is</p>
+      <p>A subtle, sustained contraction of the pelvic floor - specifically the perineal body, the small region between the genitals and the anus. In men, the contraction is felt at the perineum itself; in women, at the cervical region. It is not the squeezing of the anus (that is a different lock, <em>ashwini mudra</em>); it is finer, deeper, and quieter.</p>
+
+      <p class="bandha-section-label">What it does</p>
+      <p>Mula Bandha seals the lower aperture of the body, preventing prana from descending and being lost through the elimination organs. The texts say it redirects the downward-moving <em>apana</em> current upward, where it meets <em>prana</em> proper at the navel and ignites the inner fire.</p>
+      <p>Practically: it lifts the pelvic floor, stabilises the lower spine, deepens the seat in meditation, and produces a quiet but unmistakable upward draw of attention. Many practitioners describe the moment Mula Bandha becomes natural as the moment seated meditation becomes possible for long stretches.</p>
+
+      <p class="bandha-section-label">How it is performed</p>
+      <ol class="bandha-steps">
+        <li>Sit in a stable seated posture - cross-legged on a cushion, kneeling, or upright in a chair with feet flat. Spine erect.</li>
+        <li>Settle the breath. Take a few natural breaths, then exhale fully.</li>
+        <li>On the next inhalation, gently contract the perineum. Imagine you are lifting the pelvic floor by a fraction. Not a clench - a lift. The contraction is light enough that, from the outside, it would not be visible.</li>
+        <li>Hold the contraction lightly throughout the inhalation, the brief retention if any, and the exhalation. Continue breathing naturally.</li>
+        <li>Begin with five to ten breaths. Build slowly over weeks to longer durations. As the practice matures, the lift becomes increasingly subtle until, eventually, it can be sustained throughout pranayama and meditation almost without conscious attention.</li>
+        <li>Release at the end of practice. Sit quietly for a minute and feel the after-effect.</li>
+      </ol>
+
+      <div class="bandha-contra">
+        <strong>Specific contraindications</strong>
+        Avoid in pregnancy, during menstruation, and following any recent pelvic, abdominal, or gynaecological surgery. Forcing the contraction can lead to pelvic floor dysfunction; if you feel strain, soreness, or any unusual sensation, stop and seek guidance.
+      </div>
+    </div>
+
+    <!-- 2. Uddiyana Bandha -->
+    <div class="bandha">
+      <div class="bandha-header">
+        <p class="bandha-num">02</p>
+        <p class="bandha-sanskrit">उड्डीयान बन्ध</p>
+        <p class="bandha-name">Uddiyana Bandha</p>
+        <p class="bandha-translation">The flying-up lock</p>
+      </div>
+
+      <p class="bandha-section-label">What it is</p>
+      <p>The drawing-up of the abdominal organs, after a complete exhalation, into a hollow created beneath the rib cage. The name <em>uddiyana</em> means <em>flying up</em>; the texts describe it as the bandha that causes prana to fly upward through the central channel.</p>
+      <p>Visually it is unmistakable: a deep concavity below the ribs, the abdominal wall pulled back toward the spine and slightly upward, held for a few seconds, then released.</p>
+
+      <p class="bandha-section-label">What it does</p>
+      <p>Uddiyana Bandha is described in the Hatha Yoga Pradipika as the lion-tamer that conquers death. The claim is large; the practice that earns it is precise. Mechanically, it massages the abdominal organs, stimulates the digestive fire, tones the diaphragm, and creates a powerful upward suction that draws prana from the lower abdomen toward the heart and head. It is usually the most immediately felt of the three bandhas - a clear, unambiguous shift in the body's interior.</p>
+
+      <p class="bandha-section-label">How it is performed</p>
+      <ol class="bandha-steps">
+        <li>Practise on an empty stomach, ideally first thing in the morning before any food or drink. Standing or seated; the standing version is often easier to learn.</li>
+        <li>Standing: feet slightly apart, knees softly bent, hands resting on the thighs above the knees, body tilted slightly forward so the weight is supported by the arms. Seated: cross-legged with hands on the knees.</li>
+        <li>Take a slow, complete inhalation through the nose.</li>
+        <li>Exhale fully and forcibly through the mouth or nose, emptying the lungs as completely as possible. Squeeze the last of the breath out by drawing the abdomen in.</li>
+        <li>With the lungs empty, close the throat (a kind of mock-swallowing) and perform a <em>false inhalation</em>: expand the chest as if you were inhaling, but without actually drawing in air. The closed throat ensures no breath enters.</li>
+        <li>This false inhalation creates a vacuum in the chest, and the diaphragm is drawn upward. The abdomen, no longer pushed down by the descending diaphragm, hollows back toward the spine and lifts up under the rib cage. This is Uddiyana.</li>
+        <li>Hold for as long as is comfortable on the empty breath - five to ten seconds at first. Do not strain.</li>
+        <li>To release: relax the chest first, then gently inhale through the nose. Take several normal breaths before attempting another round.</li>
+        <li>Begin with three rounds. Build to ten over weeks and months. Always end on an exhalation and a few minutes of quiet breath observation.</li>
+      </ol>
+
+      <div class="bandha-contra">
+        <strong>Specific contraindications</strong>
+        Do not practise during pregnancy, menstruation, or with hernia, hiatal hernia, peptic ulcer, ulcerative colitis, recent abdominal surgery, severe cardiac disease, glaucoma, or hypertension. The intra-abdominal pressure changes are significant. If you feel light-headed during the empty-breath hold, release immediately and breathe normally; the body is signalling that the hold has gone too long.
+      </div>
+    </div>
+
+    <!-- 3. Jalandhara Bandha -->
+    <div class="bandha">
+      <div class="bandha-header">
+        <p class="bandha-num">03</p>
+        <p class="bandha-sanskrit">जालन्धर बन्ध</p>
+        <p class="bandha-name">Jalandhara Bandha</p>
+        <p class="bandha-translation">The throat lock</p>
+      </div>
+
+      <p class="bandha-section-label">What it is</p>
+      <p>The drawing-down of the chin to the upper chest while the spine remains long, sealing the throat. The name <em>jalandhara</em> can be parsed as <em>jala</em> (net, web) and <em>dhara</em> (holder) - the holder of the net, the lock that catches the descending nectar before it reaches the digestive fire and is consumed.</p>
+
+      <p class="bandha-section-label">What it does</p>
+      <p>Jalandhara seals the upper aperture of the body. It compresses the carotid sinuses gently, regulates blood pressure to the head, slows the heart rate, calms the mind. It is the bandha most directly associated with stillness; it makes the brain's electrical activity quieter.</p>
+      <p>In the energetic anatomy of the texts, it prevents prana from leaking upward and outward through the head, and it holds <em>amrita</em>, the inner nectar said to be secreted at the soft palate, from descending and being burnt up by the abdominal fire. Whether one reads this anatomically or symbolically, the effect on the mind is unambiguous: a profound quietening.</p>
+
+      <p class="bandha-section-label">How it is performed</p>
+      <ol class="bandha-steps">
+        <li>Sit in a stable seated posture. Spine erect.</li>
+        <li>Inhale deeply but not maximally - perhaps three-quarters full.</li>
+        <li>Lift the sternum slightly forward and upward.</li>
+        <li>Without lowering the sternum, lower the chin toward the upper chest. The neck does not curve forward; the chin descends as the chest rises to meet it. The result is a long neck and a closed throat, not a hunched neck and a slumped chest.</li>
+        <li>Press the chin firmly into the small notch above the breastbone. The tongue may rest naturally or, in some traditions, be drawn back along the soft palate.</li>
+        <li>Hold for the duration of comfortable retention - usually a few seconds at first, longer with practice. Maintain only as long as it feels easy.</li>
+        <li>To release: lift the chin first, then exhale slowly through the nose.</li>
+        <li>Begin with three rounds. Build slowly. Jalandhara is usually combined with breath retention, not held alone, so its development tracks the development of pranayama.</li>
+      </ol>
+
+      <div class="bandha-contra">
+        <strong>Specific contraindications</strong>
+        Avoid with high or low blood pressure, vertigo, recent neck or thyroid surgery, glaucoma, retinal issues, or any cervical spine condition. The carotid compression makes blood pressure changes immediate; if you feel dizzy, release at once.
+      </div>
+    </div>
+
+    <h2>Maha Bandha - the Great Lock</h2>
+
+    <p>The three bandhas are powerful singly. They are spoken of in the texts in another voice entirely when joined together, all three at once, on a single retained breath. This is <span class="sanskrit-term">Maha Bandha</span>, the Great Lock, and it is among the most concentrated practices the tradition has set down.</p>
+
+    <div class="bandha maha">
+      <div class="bandha-header">
+        <p class="bandha-num">04</p>
+        <p class="bandha-sanskrit">महा बन्ध</p>
+        <p class="bandha-name">Maha Bandha</p>
+        <p class="bandha-translation">The great lock</p>
+      </div>
+
+      <p class="bandha-section-label">What it is</p>
+      <p>Mula, Uddiyana, and Jalandhara performed together, on the empty breath, held in stillness for as long as the practitioner can comfortably sustain.</p>
+
+      <p class="bandha-section-label">What it does</p>
+      <p>The three locks together seal the body's three principal apertures simultaneously - lower, middle, upper. With prana unable to escape through any of them, the texts say it has nowhere to go but the central channel. <em>This</em>, the Hatha Yoga Pradipika says, <em>is the true union</em>. Whatever language one uses to describe what follows, the experience reported by practitioners is consistent across centuries: a sudden inwardness, a quietening of the mental noise that ordinary life takes for granted, and a subtle sense of upward gathering. Some traditions associate Maha Bandha with the awakening of <span class="sanskrit-term">kundalini</span>, the dormant energy at the base of the spine.</p>
+
+      <p class="bandha-section-label">How it is performed</p>
+      <ol class="bandha-steps">
+        <li>Practise on an empty stomach, having already established each bandha individually over weeks or months. Maha Bandha should never be the first encounter with the locks.</li>
+        <li>Sit in a stable cross-legged posture. Spine erect. Hands on knees.</li>
+        <li>Take a slow, complete inhalation through the nose.</li>
+        <li>Exhale fully through the nose, emptying the lungs.</li>
+        <li>With the breath out, perform Jalandhara: draw the chin to the chest while lifting the sternum.</li>
+        <li>Then perform Uddiyana: draw the abdomen back and up beneath the ribs.</li>
+        <li>Then engage Mula: a light, sustained lift of the perineum.</li>
+        <li>All three locks now held simultaneously, on the empty breath. Maintain for as long as is genuinely comfortable - five to ten seconds at first; longer only with much practice and direct guidance.</li>
+        <li>Release in reverse order: Mula, Uddiyana, Jalandhara. Then inhale slowly through the nose.</li>
+        <li>Take several normal breaths before attempting another round. Begin with three rounds total.</li>
+        <li>End with several minutes of seated stillness. The practice is not over when the breath returns. Much of the work happens in the silence that follows.</li>
+      </ol>
+
+      <div class="bandha-contra">
+        <strong>Specific contraindications</strong>
+        All contraindications of the individual bandhas apply. In addition: do not attempt Maha Bandha without first establishing all three individual bandhas, without an experienced teacher available, or in any state of physical, emotional, or mental instability. The combined practice intensifies the effects of each component dramatically.
+      </div>
+    </div>
+
+    <blockquote class="pull-quote">What is gathered does not vanish.<br>What is sealed does not leak.<br>What turns inward, finds its source.</blockquote>
+
+    <h2>Common errors</h2>
+
+    <ul class="principles">
+      <li>
+        <strong>Force where there should be subtlety</strong>
+        The bandhas are not strong contractions. The instruction is consistent across every classical text: a light, deliberate engagement, just enough to seal. A clenched bandha cannot be held; it tires the muscle and disturbs the breath. A subtle bandha can be held for hours.
+      </li>
+      <li>
+        <strong>Skipping the foundation</strong>
+        The bandhas presume an established asana and pranayama practice. Without the steady seat, the engaged perineum has nothing to settle on. Without the steady breath, the empty-lung holds become struggle. Build the floor before the walls.
+      </li>
+      <li>
+        <strong>Practising for sensation</strong>
+        It is tempting, especially with Uddiyana, to chase the dramatic sensation of the deep abdominal scoop. The texts warn against this. The bandha is not the sensation; it is the deeper energetic gesture the sensation accompanies. Practitioners who chase sensation tend to plateau. Practitioners who stay with the subtle work tend not to.
+      </li>
+      <li>
+        <strong>Holding too long</strong>
+        Every classical instruction insists: hold only as long as is comfortable. The mind, especially with Maha Bandha, will want to push. Do not push. The practice rewards consistency far more than duration. Three short, careful rounds done daily for a year will mature you. Three long, strained rounds done occasionally will not.
+      </li>
+      <li>
+        <strong>Practising without guidance</strong>
+        This deserves repeating, even though it has been said. The tradition is not being mystical when it insists on the teacher. It is being practical. Many things in the bandhas are invisible to the practitioner - a small cervical strain in Jalandhara, a slight downward grip in Mula, a forced over-pull in Uddiyana - that an experienced eye sees in seconds. Find a teacher. Even one good correction, early, will save years.
+      </li>
+    </ul>
+
+    <h2>Where this leads</h2>
+
+    <p>The bandhas are not, in themselves, the destination. They are infrastructure. Established as a steady practice, they become the foundation on which the deeper practices of pranayama can be built - particularly the breath retentions <span class="sanskrit-term">kumbhaka</span> in their full form, which without the bandhas are merely held breaths but with them become the gathering of prana into the central channel.</p>
+
+    <p>From there, the tradition speaks of further unfoldings: the steady awakening of <span class="sanskrit-term">kundalini</span>, the energy that lies coiled at the base of the spine; its rising through the chakras; the dissolution of the small self into <span class="sanskrit-term">samadhi</span>, the absorption that is union. These are matters for direct experience under direct guidance, not for description on a webpage. They are mentioned only so the seeker knows that the bandhas are not an end. They are the door to an entire architecture of inner practice that has been refined over millennia.</p>
+
+    <p>What is asked of the practitioner is patience. The bandhas mature over years. The first few months will be all body and breath, mostly a fight to find the right contraction in the right place. The next year will be the slow refining of subtlety. Only after that does the inner work begin - and only with a teacher to recognise when it has.</p>
+
+    <h2>Why a teacher</h2>
+
+    <p>One last word, said clearly. The internet has made it possible to read about practices that, for thousands of years, were transmitted only mouth-to-ear. This site is part of that change, and there is much that is good in it: the teachings reach more people, more freely, than ever before. But there is something the page cannot do, no matter how careful, that a teacher can.</p>
+
+    <p>A teacher can see your form. A teacher can hear when your breath is forced. A teacher can recognise the difference between a breakthrough and a destabilisation, which can look very similar from the inside. A teacher can hold the practice steady when you, inevitably, would push too hard, or stop when you should continue, or continue when you should stop. The lineage exists not because the texts are insufficient, but because the human nervous system, refined this finely, asks for a steady human witness.</p>
+
+    <p>If you have a teacher, treasure them. If you do not, the practice is to find one. There is no rush. The right teacher arrives when the seeker is ready - this is what the tradition has always said - and it is what the tradition has always meant.</p>
+
+    <p>In the meantime, study. Practise the foundations. Build asana, pranayama, meditation. When the moment comes, you will be ready, and the bandhas will be one of the gifts the tradition gives you - in person, with a hand on your shoulder, and a voice that knows your name.</p>
+
+    <div class="benediction">
+      <p>What is bound is gathered.<br>What is gathered is conserved.<br>What is conserved finds its source.<br>And the source is what you have always been.</p>
+      <span class="om">ॐ</span>
+    </div>
+
+  </article>
+
+  <div class="next-teaching">
+    <p class="next-label">Return</p>
+    <a href="/teachings/">All Teachings →</a>
+    <p class="next-desc">Return to the index of teachings, and continue from where you are drawn.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+  <a href="/install" class="install-link">Install on your device</a>
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>

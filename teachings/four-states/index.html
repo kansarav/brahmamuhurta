@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ॐ The Four States - Brahma Muhurta</title>
+<meta name="description" content="The four states of consciousness from the Mandukya Upanishad. Waking, dreaming, deep sleep, and the witness that holds them all.">
+<link rel="canonical" href="https://brahmamuhurta.ai/teachings/four-states">
+<meta property="og:title" content="The Four States - Brahma Muhurta">
+<meta property="og:description" content="Jagrat, Svapna, Sushupti, Turya. The four states of consciousness, and the awareness that contains them all.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://brahmamuhurta.ai/teachings/four-states">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#081530">
+<link rel="apple-touch-icon" href="/icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Brahma Muhurta">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --surface-hi: #15294e;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --gold-bright: #f0d99a;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.18);
+    --glow: rgba(224,198,132,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.85;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .breadcrumb {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: var(--gold-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .breadcrumb a:hover { color: var(--gold); }
+
+  .sanskrit {
+    font-family: serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    line-height: 1.2;
+    animation: shimmer 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  article h2, .om, footer .om, .benediction .om {
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 540px;
+    margin: 1.5rem auto 0;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2.5rem auto;
+  }
+
+  article {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  article h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin: 4rem 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+
+  article h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin: 2.5rem 0 1rem;
+    font-weight: 400;
+  }
+
+  article p {
+    margin-bottom: 1.5rem;
+  }
+
+  article .opening::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    float: left;
+    line-height: 0.85;
+    margin: 0.3rem 0.5rem 0 0;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  article em {
+    color: var(--text);
+    font-style: italic;
+  }
+
+  article .sanskrit-term {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  blockquote.pull-quote {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--gold);
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    max-width: 580px;
+  }
+
+  /* State cards */
+  .states {
+    display: grid;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .state {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .state:hover {
+    background: var(--surface-hi);
+  }
+
+  .state::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+
+  .state-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .state-sanskrit {
+    font-family: serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .state-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .state-translation {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .state-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: var(--text);
+  }
+
+  .state-body p {
+    margin-bottom: 1.25rem;
+  }
+
+  .state-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .state-body em {
+    color: var(--text);
+    font-style: italic;
+  }
+
+  .state-body strong {
+    color: var(--gold);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .state-tag {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    margin: 0.4rem 0.4rem 0 0;
+  }
+
+  /* AUM diagram */
+  .aum-diagram {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 3rem 2rem;
+    margin: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .aum-diagram::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+
+  .aum-symbol {
+    font-family: serif;
+    font-size: 5rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold-bright) 50%, var(--gold) 100%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .aum-rows {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem 2rem;
+    max-width: 480px;
+    margin: 2rem auto 0;
+    text-align: left;
+  }
+
+  .aum-letter {
+    font-family: serif;
+    font-size: 2rem;
+    color: var(--gold);
+    line-height: 1;
+    text-align: center;
+    padding-top: 0.2rem;
+  }
+
+  .aum-meaning {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .aum-meaning strong {
+    color: var(--gold);
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+  }
+
+  /* Other systems panel */
+  .traditions {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+  }
+
+  .traditions h3 {
+    margin-top: 0 !important;
+    margin-bottom: 1.5rem !important;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+  }
+
+  .traditions p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 1rem;
+  }
+
+  .traditions p:last-child {
+    margin-bottom: 0;
+  }
+
+  .traditions strong {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  aside.note {
+    border-left: 1px solid var(--gold-dim);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-dim);
+    font-style: italic;
+    font-family: 'IM Fell English', serif;
+    font-size: 1rem;
+  }
+
+  .benediction {
+    text-align: center;
+    margin: 5rem auto 2rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .benediction p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 0 auto 1rem;
+  }
+
+  .benediction .om {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    display: block;
+  }
+
+  .next-teaching {
+    margin-top: 4rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    text-align: center;
+    background: var(--surface);
+  }
+
+  .next-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .next-teaching a {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .next-teaching a:hover { color: var(--gold-bright); }
+
+  .next-teaching .next-desc {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+  }
+
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  footer .om {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  footer .install-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  footer .install-link:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold-dim);
+  }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.58rem; letter-spacing: 0.18em; }
+    main { padding: 6rem 1.5rem 3rem; }
+    article { font-size: 1.1rem; }
+    .state { padding: 1.75rem; }
+    .aum-diagram { padding: 2rem 1.5rem; }
+    .aum-rows { grid-template-columns: auto 1fr; gap: 1rem 1.5rem; }
+    .aum-letter { font-size: 1.6rem; }
+    .traditions { padding: 1.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="/#calculator">The Hour</a></li>
+    <li><a href="/#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/" class="current">Teachings</a></li>
+    <li><a href="/#about">About</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <header class="page-header">
+    <p class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; <a href="/teachings/">Teachings</a></p>
+    <p class="sanskrit">चतुष्पाद</p>
+    <h1>The Four States</h1>
+    <p class="subtitle">Waking, dreaming, deep sleep, and the awareness that holds them all. A map of consciousness, drawn by those who looked.</p>
+    <div class="divider"></div>
+  </header>
+
+  <article>
+
+    <p class="opening">There is something happening right now that you almost never notice. You are awake, reading these words, the world steady and dependable around you. In a few hours you will lie down and the world will dissolve into dreams. After the dreams, into a darkness so complete that not even you remain. And then, without explanation, the world will reassemble itself and you will be back, certain that the one reading these words is the same one who lay down to sleep.</p>
+
+    <p>How? In what continues you across these radical transformations? What is the something that knows the dream is not the waking, knows the deep sleep was rested, knows it is the same self emerging into another morning?</p>
+
+    <p>The ancient seers asked these questions and looked carefully for the answers. What they found is the teaching of the four states.</p>
+
+    <h2>What the Mandukya gives us</h2>
+
+    <p>The <span class="sanskrit-term">Mandukya Upanishad</span> is one of the shortest of the Upanishads - twelve verses, perhaps three minutes to read aloud. The eighth-century philosopher <span class="sanskrit-term">Adi Shankara</span> said that for the seeker who could grasp the Mandukya alone, no other text was needed. It is a small lamp that, held up correctly, illuminates the whole room.</p>
+
+    <p>What it offers is a structure: consciousness moves through four states, and each one shows us something different about who we are. The waking, the dreaming, the deep sleep - and a fourth, which the seers gave the simplest possible name. They called it <em>that</em>. The fourth.</p>
+
+    <p>The Sanskrit word for the fourth is <span class="sanskrit-term">Turya</span>. It is not a name. It is a placeholder where a name would be insufficient.</p>
+
+    <h2>The four, as you live them</h2>
+
+    <p>Read each of these slowly. They are not concepts to be understood. They are conditions you have inhabited every day of your life, and the work is only to recognise what was always there.</p>
+
+    <div class="states">
+
+      <!-- 1. JAGRAT -->
+      <div class="state">
+        <p class="state-num">01</p>
+        <p class="state-sanskrit">जाग्रत्</p>
+        <p class="state-name">Jagrat</p>
+        <p class="state-translation">The waking state</p>
+        <div class="state-body">
+          <p>This. Right now. The state in which the senses face outward, the world appears solid and shared, the body has weight, time moves in one direction, and there are objects to be known and a knower to know them.</p>
+          <p>In waking, attention drinks the world through the five senses. You are <strong>vishva</strong> - the one who experiences the gross, material universe. The shared dream that calls itself reality.</p>
+          <p>The Mandukya describes this state as <em>seven-limbed and nineteen-mouthed</em>. The seven limbs are the elements that constitute the cosmos: heaven, sun, air, fire, water, earth, space. The nineteen mouths are the channels of perception and expression - five senses, five organs of action, five vital airs, and four aspects of mind. Through them, you eat the world.</p>
+          <span class="state-tag">Outward</span>
+          <span class="state-tag">Gross</span>
+          <span class="state-tag">Shared</span>
+        </div>
+      </div>
+
+      <!-- 2. SVAPNA -->
+      <div class="state">
+        <p class="state-num">02</p>
+        <p class="state-sanskrit">स्वप्न</p>
+        <p class="state-name">Svapna</p>
+        <p class="state-translation">The dreaming state</p>
+        <div class="state-body">
+          <p>You lie down. The eyes close. The world, which seemed so utterly there, dissolves. And then - without effort, without your having built it - another world appears. Vivid. Coherent. Populated. With its own sky, its own people, its own logic.</p>
+          <p>Where did this world come from? Not from outside; the senses are sealed. It came from inside you. In dream, you become <strong>taijasa</strong> - the luminous one - and you encounter not the gross world but the subtle one, woven from impressions. From light.</p>
+          <p>The dream is the proof that consciousness is not dependent on the senses. It can construct an entire universe with no input at all. The dreamer is the same one who was awake; only the field has changed.</p>
+          <span class="state-tag">Inward</span>
+          <span class="state-tag">Subtle</span>
+          <span class="state-tag">Self-illumined</span>
+        </div>
+      </div>
+
+      <!-- 3. SUSHUPTI -->
+      <div class="state">
+        <p class="state-num">03</p>
+        <p class="state-sanskrit">सुषुप्ति</p>
+        <p class="state-name">Sushupti</p>
+        <p class="state-translation">Deep, dreamless sleep</p>
+        <div class="state-body">
+          <p>And then the dreams themselves dissolve. There is a stretch of every night - hours of it - in which there is nothing. No body, no world, no self, no thoughts, no time. And yet somehow, on waking, you know the difference between a night of good sleep and a night of bad. <em>Something</em> was there to register the rest.</p>
+          <p>The Mandukya gives this state a striking name. It calls the one who is in deep sleep <strong>prajna</strong> - the one who is wisdom itself - and says that this state is <em>a mass of consciousness, blissful, with awareness as its mouth</em>. Not absence, but undifferentiated presence. The seed-state from which both dream and waking arise.</p>
+          <p>This is closer to the truth than the waking state, the seers said. Closer because here the false sense of "me as a separate person in a world of objects" temporarily releases its grip. The bliss reported on waking from deep sleep is the bliss of a self briefly free of itself. But it is bliss without knowledge of itself - a closeness that is unconscious of its own nearness.</p>
+          <span class="state-tag">Causal</span>
+          <span class="state-tag">Undifferentiated</span>
+          <span class="state-tag">Blissful</span>
+        </div>
+      </div>
+
+      <!-- 4. TURYA -->
+      <div class="state">
+        <p class="state-num">04</p>
+        <p class="state-sanskrit">तुरीय</p>
+        <p class="state-name">Turya</p>
+        <p class="state-translation">The fourth - awareness itself</p>
+        <div class="state-body">
+          <p>Here is the move that makes the Mandukya extraordinary. After describing the three familiar states, it turns the gaze around. <em>Who is it</em>, the text asks, <em>that knows all three?</em></p>
+          <p>The waker does not know the dream from inside the dream; the dreamer does not remember the waking; the deep sleeper does not know anything at all. And yet you know all three. You know you slept. You know you dreamed. You know you are now awake. There must be something that has been awake through all of them - a fourth, behind the other three, which never sleeps and never dreams and never wakes because it has never been any of those things.</p>
+          <p>This is <strong>Turya</strong>. The seers said: it is not inward, not outward, not both, not neither. It is not knower, not known, not knowing. It cannot be grasped, cannot be characterised, cannot be made into an object. It is, the Mandukya says, the awareness in which the three states arise and dissolve. The screen on which the film of the three states plays.</p>
+          <p>And then the text delivers its quietest, most radical line: <em>this</em>, it says, pointing at Turya, <em>is the Self. This is what is to be known.</em></p>
+          <span class="state-tag">Witness</span>
+          <span class="state-tag">Pure awareness</span>
+          <span class="state-tag">The Self</span>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>AUM as the four states</h2>
+
+    <p>Now the Mandukya makes its most beautiful move. It takes the syllable <span class="sanskrit-term">AUM</span> - the syllable that, recited correctly, contains all sounds the human voice can make - and shows that it is itself the four states, in sound.</p>
+
+    <div class="aum-diagram">
+      <div class="aum-symbol">ॐ</div>
+      <div class="aum-rows">
+        <div class="aum-letter">अ</div>
+        <div class="aum-meaning">
+          <strong>A - Jagrat</strong>
+          The first sound. Open mouth, wide vowel, the voice meeting the world. The waking state.
+        </div>
+        <div class="aum-letter">उ</div>
+        <div class="aum-meaning">
+          <strong>U - Svapna</strong>
+          The middle sound. The vowel narrows, the voice turns inward, becomes subtler. The dreaming state.
+        </div>
+        <div class="aum-letter">म</div>
+        <div class="aum-meaning">
+          <strong>M - Sushupti</strong>
+          The lips close. The sound goes inside. Vibration without articulation. Deep sleep.
+        </div>
+        <div class="aum-letter">·</div>
+        <div class="aum-meaning">
+          <strong>The Silence - Turya</strong>
+          And then the sound ends. What remains is the silence in which the chant happened. This silence is the fourth. It was there before A was spoken. It is there after M ends. Without it, no sound was ever possible.
+        </div>
+      </div>
+    </div>
+
+    <p>This is why the ॐ sits at the start of every prayer, the end of every mantra, the threshold of every text. To chant it correctly is to move through the four states in a single breath, and to come to rest, finally, in the silence that holds them all.</p>
+
+    <p>The seekers were told: do not chant ॐ as if it were a word. Chant it as a doorway.</p>
+
+    <blockquote class="pull-quote">You are not the body that wakes,<br>not the mind that dreams,<br>not the silence that sleeps.<br>You are the one who knows them all.</blockquote>
+
+    <h2>The same teaching, in other rooms</h2>
+
+    <p>This is not the only tradition that has noticed the four states. Once you have seen them, they begin to appear everywhere, named differently and dressed differently, but the same shape underneath.</p>
+
+    <div class="traditions">
+      <h3 style="font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold-dim); font-weight: 400;">Other voices, same map</h3>
+      <p><strong>Buddhism</strong> speaks of the <em>three bodies</em> of the Buddha - <em>nirmanakaya</em> (the manifest, like waking), <em>sambhogakaya</em> (the subtle bliss-body, like dreaming), <em>dharmakaya</em> (the causal truth-body, like deep sleep) - and beyond all three, the recognition of pure awareness itself, often called <em>rigpa</em> in the Tibetan tradition. The fourth, by another name.</p>
+      <p>The <strong>Christian mystics</strong> spoke of the <em>via positiva</em>, the <em>via negativa</em>, the <em>dark night of the soul</em>, and the <em>unitive ground</em> in which they all dissolve. Meister Eckhart called the fourth <em>the still desert of the Godhead, where all distinction is lost</em>.</p>
+      <p>The <strong>Sufi tradition</strong> speaks of <em>nafs</em> (the worldly self), <em>qalb</em> (the heart of imagination), <em>ruh</em> (the spirit at rest), and <em>sirr</em> - the secret, the hidden, the witness behind all three.</p>
+      <p>And modern <strong>contemplative neuroscience</strong> has begun to map these distinctions in measurable form: waking baseline, REM dreams, slow-wave deep sleep, and a fourth signature seen only in advanced meditators - the awake awareness that persists through the others.</p>
+      <p>The names change. The map is the same.</p>
+    </div>
+
+    <h2>Why this matters</h2>
+
+    <p>It is one thing to read about Turya. It is another to begin to glimpse it directly. And the great insistence of the tradition is that this is not a remote possibility for monks alone. The fourth state is here, now, behind the eyes that are reading. It is not far. It is closer than the next breath. The only obstacle is that you mistake yourself for one of the first three states - the body that wakes, the mind that dreams - and so you look outward for what was already looking.</p>
+
+    <p>The whole purpose of the practice we have been pointing at on this site - the rising before dawn, the breath, the rotation of consciousness, the Sankalpa, the Yoga Nidra, the seated stillness - is to soften the grip of the first three states until the fourth can be noticed. Not gained. Not achieved. Noticed.</p>
+
+    <p>This is why the seers said the practice is in some sense ridiculous. You cannot become what you already are. You can only stop pretending to be what you are not. The waking pretends to be the self. The dreamer pretends to be the self. The sleeper, briefly, drops the pretence and is closer for a moment. But none of them is the truth.</p>
+
+    <p>The truth is the fourth, and the fourth is what is reading these words.</p>
+
+    <h2>Where to go from here</h2>
+
+    <p>The Mandukya itself, in its twelve verses, is shorter than this page. It is worth reading - many times, slowly, over years. It pairs traditionally with the <em>Karika</em> of Gaudapada, the eighth-century commentary that opens the teaching out into a full philosophical system, and with Shankara's commentary, which opens it further still. There are good translations into English. The reading list on this site will, in time, point to the ones we trust.</p>
+
+    <p>For practice: every Yoga Nidra session you do is, secretly, the four states in miniature. The body falls into deep relaxation - approaching sushupti while remaining awake. Images arise - the texture of svapna. You return to ordinary awareness - jagrat. And underneath all three, the witness who has watched the whole thing - that is your direct, daily encounter with Turya.</p>
+
+    <p>You are not asked to believe any of this. You are asked to look. The fourth is either here, behind your eyes, exactly as the seers said - or it is not. The Mandukya was written for those who would consent to find out.</p>
+
+    <div class="benediction">
+      <p>The waker rests.<br>The dreamer dissolves.<br>The sleeper releases.<br>The fourth was never any of these.<br>And the fourth is what you are.</p>
+      <span class="om">ॐ</span>
+    </div>
+
+  </article>
+
+  <div class="next-teaching">
+    <p class="next-label">Continue</p>
+    <a href="/teachings/bandhas">Bandhas →</a>
+    <p class="next-desc">The locks. Mula, Uddiyana, Jalandhara - the inner gateways of the deeper practice.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+  <a href="/install" class="install-link">Install on your device</a>
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>
