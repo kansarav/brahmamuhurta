@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ॐ Install - Brahma Muhurta</title>
+<meta name="description" content="Install Brahma Muhurta on your phone or computer. Add the divine hour to your home screen.">
+<link rel="canonical" href="https://brahmamuhurta.ai/install">
+<meta property="og:title" content="Install - Brahma Muhurta">
+<meta property="og:description" content="Add Brahma Muhurta to your home screen.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://brahmamuhurta.ai/install">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#081530">
+<link rel="apple-touch-icon" href="/icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Brahma Muhurta">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --surface-hi: #15294e;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --gold-bright: #f0d99a;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.18);
+    --glow: rgba(224,198,132,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.85;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .breadcrumb {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: var(--gold-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .breadcrumb a:hover { color: var(--gold); }
+
+  .sanskrit {
+    font-family: serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    line-height: 1.2;
+    animation: shimmer 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2.5rem auto;
+  }
+
+  /* Tabs */
+  .platform-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .tab-btn {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    padding: 0.7rem 1.5rem;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .tab-btn:hover {
+    border-color: var(--gold-dim);
+    color: var(--text);
+  }
+
+  .tab-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(224,198,132,0.08);
+  }
+
+  .panel {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .panel.active { display: block; }
+
+  .panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+
+  .panel ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+    position: relative;
+  }
+
+  .panel ol li {
+    counter-increment: step;
+    padding: 1.2rem 0 1.2rem 3.5rem;
+    border-bottom: 1px solid rgba(224,198,132,0.06);
+    position: relative;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text);
+  }
+
+  .panel ol li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
+
+  .panel ol li:last-child {
+    border-bottom: none;
+  }
+
+  .panel ol li em {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .panel-note {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  /* Why install section */
+  article {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  article h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+    margin: 4rem 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+
+  article p {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Benefits grid */
+  .benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .benefit {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1.75rem;
+    text-align: center;
+  }
+
+  .benefit-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .benefit-text {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+  }
+
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  footer .om {
+    font-size: 1.5rem;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.58rem; letter-spacing: 0.18em; }
+    main { padding: 6rem 1.5rem 3rem; }
+    article { font-size: 1.1rem; }
+    .panel { padding: 1.75rem; }
+    .panel ol li { padding-left: 3rem; font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="/#calculator">The Hour</a></li>
+    <li><a href="/#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/">Teachings</a></li>
+    <li><a href="/#about">About</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <header class="page-header">
+    <p class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; Install</p>
+    <p class="sanskrit">गृहीत्वा</p>
+    <h1>Take it with you</h1>
+    <p class="subtitle">Install Brahma Muhurta to your home screen. The divine hour, ready when you are - no app store, no signup, no surveillance.</p>
+    <div class="divider"></div>
+  </header>
+
+  <article>
+
+    <div class="benefits">
+      <div class="benefit">
+        <p class="benefit-label">Offline</p>
+        <p class="benefit-text">The Yoga Nidra audio is cached after first listen. Practice at 4am with no signal.</p>
+      </div>
+      <div class="benefit">
+        <p class="benefit-label">No browser bar</p>
+        <p class="benefit-text">Opens full-screen, like a native app. Less to distract, more to settle into.</p>
+      </div>
+      <div class="benefit">
+        <p class="benefit-label">One tap</p>
+        <p class="benefit-text">Lives on your home screen alongside your other essential things.</p>
+      </div>
+    </div>
+
+    <h2>How to install</h2>
+
+    <p>Choose your device. The instructions take less than a minute.</p>
+
+    <div class="platform-tabs">
+      <button class="tab-btn active" data-tab="ios" onclick="showTab('ios')">iPhone / iPad</button>
+      <button class="tab-btn" data-tab="android" onclick="showTab('android')">Android</button>
+      <button class="tab-btn" data-tab="desktop" onclick="showTab('desktop')">Desktop</button>
+    </div>
+
+    <div class="panel active" id="panel-ios">
+      <ol>
+        <li>Open this site in <em>Safari</em>. Other browsers on iPhone and iPad will not work for installation.</li>
+        <li>Tap the <em>Share</em> button at the bottom of the screen. It looks like a square with an arrow pointing up.</li>
+        <li>Scroll down in the share menu until you see <em>Add to Home Screen</em>. Tap it.</li>
+        <li>You will see a preview with the ॐ icon and the name <em>Brahma Muhurta</em>. Tap <em>Add</em> in the top-right corner.</li>
+        <li>The icon now sits on your home screen. Tap it to open Brahma Muhurta in its own window, without the browser bar.</li>
+      </ol>
+      <p class="panel-note">If you do not see <em>Add to Home Screen</em> in the share menu, scroll down further or tap <em>Edit Actions</em> at the bottom to add it.</p>
+    </div>
+
+    <div class="panel" id="panel-android">
+      <ol>
+        <li>Open this site in <em>Chrome</em>, <em>Edge</em>, <em>Brave</em>, or another modern browser.</li>
+        <li>Tap the three-dot menu in the top-right corner of the browser.</li>
+        <li>Select <em>Install app</em> or <em>Add to Home Screen</em>. The exact wording depends on your browser.</li>
+        <li>Confirm by tapping <em>Install</em>. The app will be added to your home screen and your app drawer.</li>
+        <li>You may also see a small banner at the top or bottom of the screen offering installation directly. Either route works.</li>
+      </ol>
+      <p class="panel-note">On Android, the installed app behaves almost identically to one downloaded from the Play Store, but uses a fraction of the storage.</p>
+    </div>
+
+    <div class="panel" id="panel-desktop">
+      <ol>
+        <li>Open this site in <em>Chrome</em>, <em>Edge</em>, or <em>Brave</em> on your computer.</li>
+        <li>Look for an install icon in the address bar - usually a small square with a downward arrow, on the right side of the URL.</li>
+        <li>Click the icon, then click <em>Install</em> in the prompt that appears.</li>
+        <li>Brahma Muhurta will open in its own window and add itself to your applications list, your dock, or your start menu.</li>
+        <li>You can pin it for quick access, just like any other app.</li>
+      </ol>
+      <p class="panel-note">Safari on Mac does not yet support web app installation in the same way. Use Chrome, Edge, or Brave for the cleanest experience.</p>
+    </div>
+
+    <h2>What gets stored</h2>
+
+    <p>When you install, the site itself is cached on your device - the pages, the layout, the icon. The Yoga Nidra audio is not pre-downloaded. It is cached only as you play each segment, so the first practice uses your connection and every subsequent practice can be done offline.</p>
+
+    <p>Nothing is sent back. There are no accounts, no analytics tracking your practice, no notifications waiting to interrupt you. The installation is between your device and the cache. Brahma Muhurta has no idea you are using it, and prefers it that way.</p>
+
+    <h2>To remove it</h2>
+
+    <p>Uninstall as you would any other app. On iPhone, hold the icon and tap <em>Remove App</em>. On Android, drag the icon to <em>Uninstall</em> at the top of the screen. On desktop, right-click the app and choose <em>Uninstall</em>. The cache is cleared automatically.</p>
+
+  </article>
+
+</main>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+</footer>
+
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.tab === name);
+  });
+  document.querySelectorAll('.panel').forEach(panel => {
+    panel.classList.toggle('active', panel.id === 'panel-' + name);
+  });
+}
+
+// Auto-detect platform on load
+(function() {
+  const ua = navigator.userAgent.toLowerCase();
+  if (/iphone|ipad|ipod/.test(ua)) {
+    showTab('ios');
+  } else if (/android/.test(ua)) {
+    showTab('android');
+  } else if (/macintosh|windows|linux/.test(ua)) {
+    showTab('desktop');
+  }
+})();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>

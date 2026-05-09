@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ॐ Surya Namaskar - Salutations to the Sun</title>
+<meta name="description" content="The twelve classical postures of Surya Namaskar. The breath that moves them, the mantras of the dawn, and how to practise.">
+<link rel="canonical" href="https://brahmamuhurta.ai/teachings/surya-namaskar">
+<meta property="og:title" content="Surya Namaskar - Salutations to the Sun">
+<meta property="og:description" content="The twelve postures, the breath that moves them, and the mantras of the dawn.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://brahmamuhurta.ai/teachings/surya-namaskar">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#081530">
+<link rel="apple-touch-icon" href="/icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Brahma Muhurta">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --surface-hi: #15294e;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --gold-bright: #f0d99a;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.18);
+    --glow: rgba(224,198,132,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.85;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .breadcrumb {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: var(--gold-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .breadcrumb a:hover { color: var(--gold); }
+
+  .sanskrit {
+    font-family: serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    line-height: 1.2;
+    animation: shimmer 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Shimmer on section heads, om */
+  article h2, .om, footer .om, .benediction .om {
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 560px;
+    margin: 1.5rem auto 0;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2.5rem auto;
+  }
+
+  article {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  article h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    margin: 4rem 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+
+  article h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin: 2.5rem 0 1rem;
+    font-weight: 400;
+  }
+
+  article p {
+    margin-bottom: 1.5rem;
+  }
+
+  article .opening::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    float: left;
+    line-height: 0.85;
+    margin: 0.3rem 0.5rem 0 0;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  article em {
+    color: var(--text);
+    font-style: italic;
+  }
+
+  article .sanskrit-term {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  blockquote.pull-quote {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--gold);
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    max-width: 580px;
+  }
+
+  /* Pose grid */
+  .poses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 2.5rem 0;
+  }
+
+  .pose {
+    background: var(--surface);
+    padding: 2rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .pose:hover {
+    background: var(--surface-hi);
+  }
+
+  .pose-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 1rem;
+  }
+
+  .pose-svg {
+    height: 110px;
+    width: 100%;
+    margin: 0.5rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pose-svg svg {
+    height: 100%;
+    width: auto;
+  }
+
+  .pose-svg svg path,
+  .pose-svg svg line,
+  .pose-svg svg circle,
+  .pose-svg svg ellipse {
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .pose-svg svg circle.head {
+    fill: var(--gold);
+    stroke: var(--gold);
+  }
+
+  .pose-sanskrit {
+    font-family: serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    color: var(--gold-dim);
+    margin-bottom: 0.4rem;
+  }
+
+  .pose-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+  }
+
+  .pose-translation {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .pose-breath {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .pose-mantra {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--gold);
+    line-height: 1.6;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(224,198,132,0.08);
+  }
+
+  .pose-mantra-meaning {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    margin-top: 0.3rem;
+  }
+
+  /* Principles list */
+  ul.principles {
+    list-style: none;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    counter-reset: principle;
+  }
+
+  ul.principles li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text);
+    padding: 1.2rem 0 1.2rem 4rem;
+    border-bottom: 1px solid rgba(224,198,132,0.06);
+    position: relative;
+    counter-increment: principle;
+  }
+
+  ul.principles li::before {
+    content: counter(principle, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
+
+  ul.principles li:last-child {
+    border-bottom: none;
+  }
+
+  ul.principles strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  /* Caution */
+  aside.caution {
+    background: rgba(200,90,90,0.04);
+    border-left: 1px solid #c8866e;
+    padding: 1.25rem 1.5rem;
+    margin: 2.5rem 0;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    border-radius: 1px;
+  }
+
+  aside.caution strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #c8866e;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  aside.note {
+    border-left: 1px solid var(--gold-dim);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-dim);
+    font-style: italic;
+    font-family: 'IM Fell English', serif;
+    font-size: 1rem;
+  }
+
+  /* Rounds card */
+  .rounds {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+
+  .round {
+    background: var(--surface);
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .round-number {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: var(--gold);
+    font-weight: 300;
+    margin-bottom: 0.3rem;
+  }
+
+  .round-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.6rem;
+  }
+
+  .round-desc {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  .benediction {
+    text-align: center;
+    margin: 5rem auto 2rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .benediction p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 0 auto 1rem;
+  }
+
+  .benediction .om {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    display: block;
+  }
+
+  .next-teaching {
+    margin-top: 4rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    text-align: center;
+    background: var(--surface);
+  }
+
+  .next-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .next-teaching a {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .next-teaching a:hover { color: var(--gold-bright); }
+
+  .next-teaching .next-desc {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+  }
+
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  footer .om {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  footer .install-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  footer .install-link:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold-dim);
+  }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.58rem; letter-spacing: 0.18em; }
+    main { padding: 6rem 1.5rem 3rem; }
+    article { font-size: 1.1rem; }
+    ul.principles li { padding-left: 3rem; }
+    .poses { grid-template-columns: repeat(2, 1fr); }
+    .pose { padding: 1.5rem 1rem; }
+  }
+
+  @media (max-width: 480px) {
+    .poses { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="/#calculator">The Hour</a></li>
+    <li><a href="/#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/" class="current">Teachings</a></li>
+    <li><a href="/#about">About</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <header class="page-header">
+    <p class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; <a href="/teachings/">Teachings</a></p>
+    <p class="sanskrit">सूर्य नमस्कार</p>
+    <h1>Surya Namaskar</h1>
+    <p class="subtitle">Salutations to the sun. Twelve postures, twelve breaths, twelve names of the divine source of light. The body's morning prayer.</p>
+    <div class="divider"></div>
+  </header>
+
+  <article>
+
+    <p class="opening">Long before yoga became a fitness practice, before mats and studios and ninety-minute classes, there was a simple act performed at the threshold of dawn: the body bowing toward the rising sun. <span class="sanskrit-term">Surya Namaskar</span> - from <em>Surya</em>, the sun, and <em>namaskar</em>, the act of reverent salutation - is older than its current form, and older than the question of whether it is yoga or worship. It is both. It is a prayer made of postures.</p>
+
+    <p>Performed at first light, facing the east, the body moves through twelve positions in a single fluid sequence, each transition carried on a single breath. The whole round takes roughly a minute. In that minute, every major joint is mobilised, every major muscle is engaged, the spine flexes and extends, the heart rate rises, the breath deepens, and the mind - if you let it - becomes silent. It is the most efficient gift the tradition has ever made to the morning.</p>
+
+    <p>And yet to call it efficient is to miss it. Surya Namaskar is, at its heart, an act of devotion. The sun is not merely a star. It is the visible face of the source - the first form by which the formless is known. To salute the sun at dawn is to acknowledge that one's own life burns by borrowed light.</p>
+
+    <h2>Before you begin</h2>
+
+    <p><strong>Time.</strong> Brahma Muhurta, facing east. If you cannot practise then, the actual sunrise is the next-best moment - eleven rounds as the sun crests the horizon is the classical practice.</p>
+
+    <p><strong>Space.</strong> A clean, level surface, ideally outdoors or by an open window. The length of a yoga mat is enough. The body should not feel cramped; the arms must be free to extend overhead and back.</p>
+
+    <p><strong>Stomach.</strong> Empty. Surya Namaskar is vigorous; food in the stomach makes it uncomfortable and can cause nausea.</p>
+
+    <p><strong>Pace.</strong> One breath per posture. Slow at first - take whole long breaths, do not rush the transitions. Speed is not the practice. Coordination of breath and movement is.</p>
+
+    <aside class="caution">
+      <strong>A word of caution</strong>
+      Surya Namaskar is a vigorous practice. If you are pregnant beyond the first trimester, have a hernia, recent abdominal or spinal surgery, severe back or knee problems, uncontrolled high blood pressure, or heart disease, consult a qualified teacher and your physician before practising. Modify or skip postures that hurt. The sun does not demand suffering.
+    </aside>
+
+    <h2>The twelve postures</h2>
+
+    <p>Each posture is held for a single breath and named with a single mantra. Read through the sequence first to understand its shape; the rhythm comes with practice. Postures one through six are the descent. Seven through twelve mirror them in reverse, the ascent. The whole round is one full breath of the body itself.</p>
+
+    <div class="poses">
+
+      <!-- 1. Pranamasana -->
+      <div class="pose">
+        <p class="pose-num">01</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 60 110">
+            <circle class="head" cx="30" cy="14" r="5"/>
+            <line x1="30" y1="19" x2="30" y2="65"/>
+            <!-- prayer hands at chest -->
+            <path d="M 30 32 L 22 38 L 22 44 M 30 32 L 38 38 L 38 44 M 22 44 L 38 44"/>
+            <!-- legs -->
+            <line x1="30" y1="65" x2="24" y2="98"/>
+            <line x1="30" y1="65" x2="36" y2="98"/>
+            <!-- feet -->
+            <line x1="22" y1="100" x2="28" y2="100"/>
+            <line x1="34" y1="100" x2="40" y2="100"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">प्रणामासन</p>
+        <p class="pose-name">Pranamasana</p>
+        <p class="pose-translation">The prayer pose</p>
+        <p class="pose-breath">Exhale</p>
+        <p class="pose-mantra">Om Mitraya Namaha
+          <span class="pose-mantra-meaning">to the friend of all</span>
+        </p>
+      </div>
+
+      <!-- 2. Hasta Uttanasana -->
+      <div class="pose">
+        <p class="pose-num">02</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 60 110">
+            <circle class="head" cx="34" cy="22" r="5"/>
+            <!-- back-arched torso -->
+            <path d="M 34 27 Q 36 50 30 70"/>
+            <!-- arms reaching up and back -->
+            <path d="M 34 32 Q 42 18 50 10"/>
+            <path d="M 34 32 Q 26 18 18 10"/>
+            <!-- legs -->
+            <line x1="30" y1="70" x2="24" y2="100"/>
+            <line x1="30" y1="70" x2="34" y2="100"/>
+            <line x1="22" y1="102" x2="28" y2="102"/>
+            <line x1="32" y1="102" x2="38" y2="102"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">हस्त उत्तानासन</p>
+        <p class="pose-name">Hasta Uttanasana</p>
+        <p class="pose-translation">Raised arms pose</p>
+        <p class="pose-breath">Inhale</p>
+        <p class="pose-mantra">Om Ravaye Namaha
+          <span class="pose-mantra-meaning">to the shining one</span>
+        </p>
+      </div>
+
+      <!-- 3. Hasta Padasana -->
+      <div class="pose">
+        <p class="pose-num">03</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 60 110">
+            <!-- folded forward -->
+            <circle class="head" cx="30" cy="80" r="5"/>
+            <path d="M 30 75 Q 30 50 30 40"/>
+            <!-- arms hanging to feet -->
+            <line x1="30" y1="50" x2="26" y2="98"/>
+            <line x1="30" y1="50" x2="34" y2="98"/>
+            <!-- legs straight -->
+            <line x1="30" y1="40" x2="22" y2="98"/>
+            <line x1="30" y1="40" x2="38" y2="98"/>
+            <!-- feet -->
+            <line x1="20" y1="100" x2="38" y2="100"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">हस्त पादासन</p>
+        <p class="pose-name">Hasta Padasana</p>
+        <p class="pose-translation">Hand to foot pose</p>
+        <p class="pose-breath">Exhale</p>
+        <p class="pose-mantra">Om Suryaya Namaha
+          <span class="pose-mantra-meaning">to the dispeller of darkness</span>
+        </p>
+      </div>
+
+      <!-- 4. Ashwa Sanchalanasana -->
+      <div class="pose">
+        <p class="pose-num">04</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 90 110">
+            <circle class="head" cx="60" cy="35" r="5"/>
+            <!-- torso lifted, gaze up -->
+            <path d="M 60 40 Q 55 55 45 70"/>
+            <!-- arms straight down -->
+            <line x1="50" y1="55" x2="50" y2="95"/>
+            <line x1="40" y1="55" x2="40" y2="95"/>
+            <!-- right leg back, straight -->
+            <line x1="45" y1="70" x2="80" y2="100"/>
+            <!-- left leg forward, bent -->
+            <line x1="45" y1="70" x2="45" y2="85"/>
+            <line x1="45" y1="85" x2="35" y2="100"/>
+            <!-- ground -->
+            <line x1="32" y1="102" x2="85" y2="102"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">अश्व संचालनासन</p>
+        <p class="pose-name">Ashwa Sanchalanasana</p>
+        <p class="pose-translation">Equestrian pose</p>
+        <p class="pose-breath">Inhale</p>
+        <p class="pose-mantra">Om Bhanave Namaha
+          <span class="pose-mantra-meaning">to the illuminator</span>
+        </p>
+      </div>
+
+      <!-- 5. Dandasana -->
+      <div class="pose">
+        <p class="pose-num">05</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 100 110">
+            <circle class="head" cx="20" cy="60" r="5"/>
+            <!-- straight body line -->
+            <line x1="25" y1="60" x2="80" y2="65"/>
+            <!-- arms -->
+            <line x1="22" y1="64" x2="22" y2="92"/>
+            <!-- legs -->
+            <line x1="80" y1="65" x2="92" y2="92"/>
+            <!-- feet line -->
+            <line x1="18" y1="94" x2="26" y2="94"/>
+            <line x1="88" y1="94" x2="96" y2="94"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">दण्डासन</p>
+        <p class="pose-name">Dandasana</p>
+        <p class="pose-translation">Plank pose</p>
+        <p class="pose-breath">Exhale</p>
+        <p class="pose-mantra">Om Khagaya Namaha
+          <span class="pose-mantra-meaning">to the one who moves through the sky</span>
+        </p>
+      </div>
+
+      <!-- 6. Ashtanga Namaskara -->
+      <div class="pose">
+        <p class="pose-num">06</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 100 110">
+            <circle class="head" cx="20" cy="78" r="5"/>
+            <!-- chest down, hips up -->
+            <path d="M 25 80 Q 50 75 70 60"/>
+            <!-- arms bent -->
+            <line x1="25" y1="82" x2="22" y2="92"/>
+            <!-- legs -->
+            <line x1="70" y1="60" x2="80" y2="92"/>
+            <!-- knees on floor -->
+            <line x1="60" y1="92" x2="65" y2="92"/>
+            <!-- feet/toes -->
+            <line x1="78" y1="94" x2="84" y2="94"/>
+            <line x1="18" y1="94" x2="26" y2="94"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">अष्टाङ्ग नमस्कार</p>
+        <p class="pose-name">Ashtanga Namaskara</p>
+        <p class="pose-translation">Eight-limbed salutation</p>
+        <p class="pose-breath">Hold</p>
+        <p class="pose-mantra">Om Pushne Namaha
+          <span class="pose-mantra-meaning">to the giver of strength</span>
+        </p>
+      </div>
+
+      <!-- 7. Bhujangasana -->
+      <div class="pose">
+        <p class="pose-num">07</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 100 110">
+            <circle class="head" cx="22" cy="50" r="5"/>
+            <!-- chest lifted, gaze forward -->
+            <path d="M 26 54 Q 38 70 60 80"/>
+            <!-- arms straight down to floor -->
+            <line x1="28" y1="62" x2="28" y2="92"/>
+            <!-- legs flat -->
+            <line x1="60" y1="80" x2="92" y2="92"/>
+            <!-- ground -->
+            <line x1="20" y1="94" x2="96" y2="94"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">भुजङ्गासन</p>
+        <p class="pose-name">Bhujangasana</p>
+        <p class="pose-translation">Cobra pose</p>
+        <p class="pose-breath">Inhale</p>
+        <p class="pose-mantra">Om Hiranyagarbhaya Namaha
+          <span class="pose-mantra-meaning">to the golden womb of being</span>
+        </p>
+      </div>
+
+      <!-- 8. Adho Mukha Svanasana -->
+      <div class="pose">
+        <p class="pose-num">08</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 100 110">
+            <!-- inverted V -->
+            <line x1="20" y1="92" x2="50" y2="20"/>
+            <line x1="50" y1="20" x2="80" y2="92"/>
+            <!-- head hanging down between arms -->
+            <circle class="head" cx="45" cy="35" r="5"/>
+            <!-- ground -->
+            <line x1="16" y1="94" x2="24" y2="94"/>
+            <line x1="76" y1="94" x2="84" y2="94"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">अधोमुखश्वानासन</p>
+        <p class="pose-name">Adho Mukha Svanasana</p>
+        <p class="pose-translation">Downward facing dog</p>
+        <p class="pose-breath">Exhale</p>
+        <p class="pose-mantra">Om Marichaye Namaha
+          <span class="pose-mantra-meaning">to the lord of the dawn</span>
+        </p>
+      </div>
+
+      <!-- 9. Ashwa Sanchalanasana (mirror) -->
+      <div class="pose">
+        <p class="pose-num">09</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 90 110">
+            <circle class="head" cx="30" cy="35" r="5"/>
+            <path d="M 30 40 Q 35 55 45 70"/>
+            <line x1="40" y1="55" x2="40" y2="95"/>
+            <line x1="50" y1="55" x2="50" y2="95"/>
+            <!-- left leg back, straight -->
+            <line x1="45" y1="70" x2="10" y2="100"/>
+            <!-- right leg forward, bent -->
+            <line x1="45" y1="70" x2="45" y2="85"/>
+            <line x1="45" y1="85" x2="55" y2="100"/>
+            <line x1="5" y1="102" x2="58" y2="102"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">अश्व संचालनासन</p>
+        <p class="pose-name">Ashwa Sanchalanasana</p>
+        <p class="pose-translation">Equestrian pose, other side</p>
+        <p class="pose-breath">Inhale</p>
+        <p class="pose-mantra">Om Adityaya Namaha
+          <span class="pose-mantra-meaning">to the son of Aditi, the boundless</span>
+        </p>
+      </div>
+
+      <!-- 10. Hasta Padasana -->
+      <div class="pose">
+        <p class="pose-num">10</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 60 110">
+            <circle class="head" cx="30" cy="80" r="5"/>
+            <path d="M 30 75 Q 30 50 30 40"/>
+            <line x1="30" y1="50" x2="26" y2="98"/>
+            <line x1="30" y1="50" x2="34" y2="98"/>
+            <line x1="30" y1="40" x2="22" y2="98"/>
+            <line x1="30" y1="40" x2="38" y2="98"/>
+            <line x1="20" y1="100" x2="38" y2="100"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">हस्त पादासन</p>
+        <p class="pose-name">Hasta Padasana</p>
+        <p class="pose-translation">Hand to foot pose</p>
+        <p class="pose-breath">Exhale</p>
+        <p class="pose-mantra">Om Savitre Namaha
+          <span class="pose-mantra-meaning">to the source of all that is</span>
+        </p>
+      </div>
+
+      <!-- 11. Hasta Uttanasana -->
+      <div class="pose">
+        <p class="pose-num">11</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 60 110">
+            <circle class="head" cx="34" cy="22" r="5"/>
+            <path d="M 34 27 Q 36 50 30 70"/>
+            <path d="M 34 32 Q 42 18 50 10"/>
+            <path d="M 34 32 Q 26 18 18 10"/>
+            <line x1="30" y1="70" x2="24" y2="100"/>
+            <line x1="30" y1="70" x2="34" y2="100"/>
+            <line x1="22" y1="102" x2="28" y2="102"/>
+            <line x1="32" y1="102" x2="38" y2="102"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">हस्त उत्तानासन</p>
+        <p class="pose-name">Hasta Uttanasana</p>
+        <p class="pose-translation">Raised arms pose</p>
+        <p class="pose-breath">Inhale</p>
+        <p class="pose-mantra">Om Arkaya Namaha
+          <span class="pose-mantra-meaning">to the radiant one</span>
+        </p>
+      </div>
+
+      <!-- 12. Pranamasana -->
+      <div class="pose">
+        <p class="pose-num">12</p>
+        <div class="pose-svg">
+          <svg viewBox="0 0 60 110">
+            <circle class="head" cx="30" cy="14" r="5"/>
+            <line x1="30" y1="19" x2="30" y2="65"/>
+            <path d="M 30 32 L 22 38 L 22 44 M 30 32 L 38 38 L 38 44 M 22 44 L 38 44"/>
+            <line x1="30" y1="65" x2="24" y2="98"/>
+            <line x1="30" y1="65" x2="36" y2="98"/>
+            <line x1="22" y1="100" x2="28" y2="100"/>
+            <line x1="34" y1="100" x2="40" y2="100"/>
+          </svg>
+        </div>
+        <p class="pose-sanskrit">प्रणामासन</p>
+        <p class="pose-name">Pranamasana</p>
+        <p class="pose-translation">The prayer pose, return</p>
+        <p class="pose-breath">Exhale</p>
+        <p class="pose-mantra">Om Bhaskaraya Namaha
+          <span class="pose-mantra-meaning">to the giver of light</span>
+        </p>
+      </div>
+
+    </div>
+
+    <aside class="note">One full sequence is one round. The classical practice includes alternation: in odd rounds the right leg goes back in pose four and forward in pose nine; in even rounds, the left. Over a full set, the body remains symmetrical.</aside>
+
+    <h2>How many rounds</h2>
+
+    <p>The traditional answer is <em>eleven</em>. Eleven is auspicious in the tradition - one of the small set of numbers (3, 5, 7, 11, 21, 108) reserved for sacred repetition. Eleven rounds takes roughly twelve minutes. It warms the body, mobilises the spine, and prepares the system for pranayama and meditation without exhausting either.</p>
+
+    <p>For different days and different states, different counts:</p>
+
+    <div class="rounds">
+      <div class="round">
+        <p class="round-number">3</p>
+        <p class="round-label">Beginner</p>
+        <p class="round-desc">A gentle introduction. The body learns the sequence before being asked for stamina.</p>
+      </div>
+      <div class="round">
+        <p class="round-number">7</p>
+        <p class="round-label">Daily</p>
+        <p class="round-desc">A sustainable count for daily practice. Enough to enliven, not enough to fatigue.</p>
+      </div>
+      <div class="round">
+        <p class="round-number">11</p>
+        <p class="round-label">Classical</p>
+        <p class="round-desc">The traditional count. Eleven complete salutations to the rising sun.</p>
+      </div>
+      <div class="round">
+        <p class="round-number">21</p>
+        <p class="round-label">Vigorous</p>
+        <p class="round-desc">When the body asks for more. Builds heat, stamina, and the kind of clarity that comes from sustained effort.</p>
+      </div>
+      <div class="round">
+        <p class="round-number">108</p>
+        <p class="round-label">Sacred</p>
+        <p class="round-desc">Performed on auspicious days, equinoxes, solstices. A practice in itself, taking over an hour.</p>
+      </div>
+    </div>
+
+    <h2>The breath</h2>
+
+    <p>Surya Namaskar is, before it is anything else, a practice of synchronised breath and movement. Each transition is carried on a single breath. Inhale opens and lifts the body. Exhale contracts and folds. There is no extra breathing between postures - the breath itself is the timing.</p>
+
+    <p>If the breath cannot keep up, the practice has gone too fast. Slow down until the breath leads again. The body should follow the breath, not the other way round. This is the difference between Surya Namaskar as exercise and Surya Namaskar as practice.</p>
+
+    <h2>The mantras</h2>
+
+    <p>Each posture has a name of the sun. Together, the twelve names trace the full character of the source: friend, illuminator, dispeller of darkness, golden womb of being, lord of the dawn, giver of light. To recite them is to call the sun by name twelve times before it has fully risen.</p>
+
+    <p>The mantras can be chanted aloud, whispered, or said only in the mind. They can also, especially at first, be skipped entirely. The practice is complete without them. They are an offering to the practice when the practice is ready to receive them.</p>
+
+    <blockquote class="pull-quote">The body bows.<br>The breath flows.<br>The mind grows still.<br>The sun rises.</blockquote>
+
+    <h2>Common mistakes</h2>
+
+    <ul class="principles">
+      <li>
+        <strong>Rushing the rounds</strong>
+        Eleven careful rounds will transform a morning. Eleven hurried rounds will leave you flushed and unsettled. The pace is set by the breath, not the clock. If you find yourself watching the clock, stop counting.
+      </li>
+      <li>
+        <strong>Holding the breath in transition</strong>
+        Each posture is a single breath. The breath does not pause; it moves continuously, and the body moves with it. If you find yourself holding, the body has gone faster than the breath. Let the breath lead.
+      </li>
+      <li>
+        <strong>Sloppy form for the sake of rounds</strong>
+        Five rounds done with care are worth more than fifteen done carelessly. The forms exist for reasons - the spinal arc in pose two, the long line in pose five, the deep arch in pose seven. Hold each shape consciously, even briefly.
+      </li>
+      <li>
+        <strong>Forgetting the alternation</strong>
+        Pose four and pose nine alternate sides round by round. Skip the alternation and the body becomes uneven over time. A small habit, easily missed, easily kept once attended to.
+      </li>
+      <li>
+        <strong>Practising without warming up</strong>
+        For the very first morning round, move gently. The body has been still for hours. The classical practice begins with three slow rounds before any vigorous ones. Honour the body's cold start.
+      </li>
+    </ul>
+
+    <h2>Where it sits in the practice</h2>
+
+    <p>Surya Namaskar is the bridge between sleep and stillness. It comes after rising, after washing, after a glass of water, and before pranayama and meditation. The body is mobilised; the breath is deepened; the heart is opened. The seated practice that follows is met by a system already alive.</p>
+
+    <p>If your morning is short, eleven rounds plus five minutes of seated stillness is a complete practice. If it is even shorter, three rounds and one minute of sitting will still alter the day. The sun rises whether you greet it or not. Greet it anyway. Something in you will know that you did.</p>
+
+    <div class="benediction">
+      <p>Twelve names. Twelve breaths. Twelve postures.<br>One sun. One body. One practice.<br>May the dawn find you ready.</p>
+      <span class="om">ॐ</span>
+    </div>
+
+  </article>
+
+  <div class="next-teaching">
+    <p class="next-label">Return</p>
+    <a href="/teachings/">All Teachings →</a>
+    <p class="next-desc">Return to the index of teachings, and continue from where you are drawn.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+  <a href="/install" class="install-link">Install on your device</a>
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>

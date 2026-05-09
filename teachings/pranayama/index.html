@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ॐ Pranayama - The Science of Breath</title>
+<meta name="description" content="The classical breath practices of pranayama. Nadi Shodhana, Bhramari, the ratios, and the inner science of prana.">
+<link rel="canonical" href="https://brahmamuhurta.ai/teachings/pranayama">
+<meta property="og:title" content="Pranayama - The Science of Breath">
+<meta property="og:description" content="The bridge between body and mind. Nadi Shodhana, Bhramari, and the classical ratios.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://brahmamuhurta.ai/teachings/pranayama">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#081530">
+<link rel="apple-touch-icon" href="/icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Brahma Muhurta">
+<meta name="mobile-web-app-capable" content="yes"><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.15);
+    --glow: rgba(224,198,132,0.08);
+    --surface-hi: #15294e;
+    --gold-bright: #f0d99a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.85;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+  }
+
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .breadcrumb {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+
+  .breadcrumb a {
+    color: var(--gold-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .breadcrumb a:hover { color: var(--gold); }
+
+  .sanskrit {
+    font-family: serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    line-height: 1.2;
+    animation: shimmer 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Shimmer on section heads, om, benediction om */
+  article h2, .section-heading, .om, footer .om, .benediction .om {
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .subtitle {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2.5rem auto;
+  }
+
+  article {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  article h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 4rem 0 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    font-weight: 400;
+  }
+
+  article h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin: 2.5rem 0 1rem;
+    font-weight: 400;
+  }
+
+  article p {
+    margin-bottom: 1.5rem;
+  }
+
+  article .opening::first-letter {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    float: left;
+    line-height: 0.85;
+    margin: 0.3rem 0.5rem 0 0;
+    color: var(--gold);
+    font-weight: 300;
+  }
+
+  article em {
+    color: var(--text);
+    font-style: italic;
+  }
+
+  article .sanskrit-term {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  blockquote.pull-quote, .pull-quote {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--gold);
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    max-width: 580px;
+  }
+
+  /* Practice card - for Nadi Shodhana, Bhramari */
+  .practice {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .practice::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+
+  .practice-header {
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+    position: relative;
+  }
+
+  .practice-sanskrit {
+    font-family: serif;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .practice-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .practice-translation {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+  }
+
+  .practice ol {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+    position: relative;
+  }
+
+  .practice ol li {
+    counter-increment: step;
+    padding: 1rem 0 1rem 3.5rem;
+    border-bottom: 1px solid rgba(224,198,132,0.06);
+    position: relative;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--text);
+  }
+
+  .practice ol li::before {
+    content: counter(step, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.2rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
+
+  .practice ol li:last-child {
+    border-bottom: none;
+  }
+
+  .practice .practice-note {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  /* Ratios */
+  .ratios {
+    display: grid;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 2rem 0;
+  }
+
+  .ratio-row {
+    background: var(--surface);
+    padding: 1.5rem 1.75rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .ratio-numbers {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  .ratio-desc {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .ratio-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Caution */
+  aside.caution {
+    background: rgba(200,90,90,0.04);
+    border-left: 1px solid #c8866e;
+    padding: 1.25rem 1.5rem;
+    margin: 2.5rem 0;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    border-radius: 1px;
+  }
+
+  aside.caution strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #c8866e;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  aside.note {
+    border-left: 1px solid var(--gold-dim);
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 2rem 0;
+    color: var(--text-dim);
+    font-style: italic;
+    font-family: 'IM Fell English', serif;
+    font-size: 1rem;
+  }
+
+  /* Principles */
+  ul.principles {
+    list-style: none;
+    padding: 2rem 0;
+    margin: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    counter-reset: principle;
+  }
+
+  ul.principles li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text);
+    padding: 1.2rem 0 1.2rem 4rem;
+    border-bottom: 1px solid rgba(224,198,132,0.06);
+    position: relative;
+    counter-increment: principle;
+  }
+
+  ul.principles li::before {
+    content: counter(principle, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    top: 1.4rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
+
+  ul.principles li:last-child {
+    border-bottom: none;
+  }
+
+  ul.principles strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+  }
+
+  .benediction {
+    text-align: center;
+    margin: 5rem auto 2rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .benediction p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 0 auto 1rem;
+  }
+
+  .benediction .om {
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-top: 1.5rem;
+    display: block;
+  }
+
+  .next-teaching {
+    margin-top: 4rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    text-align: center;
+    background: var(--surface);
+  }
+
+  .next-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .next-teaching a {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .next-teaching a:hover { color: #f0d99a; }
+
+  .next-teaching .next-desc {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+  }
+
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  footer .om {
+    font-size: 1.5rem;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  footer .install-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  footer .install-link:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold-dim);
+  }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+    .nav-links a { font-size: 0.6rem; }
+    main { padding: 6rem 1.5rem 3rem; }
+    article { font-size: 1.1rem; }
+    .practice { padding: 1.75rem; }
+    .practice ol li { padding-left: 3rem; font-size: 1rem; }
+    ul.principles li { padding-left: 3rem; }
+    .ratio-row { grid-template-columns: 1fr; gap: 0.75rem; padding: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="/#calculator">The Hour</a></li>
+    <li><a href="/#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/" class="current">Teachings</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <header class="page-header">
+    <p class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; <a href="/teachings/">Teachings</a></p>
+    <p class="sanskrit">प्राणायाम</p>
+    <h1>Pranayama</h1>
+    <p class="subtitle">The science of breath. The bridge between body and mind, between the gross and the subtle, between the breath you take and the life that takes you.</p>
+    <div class="divider"></div>
+  </header>
+
+  <article>
+
+    <p class="opening">The English word <em>breath</em> does not translate <span class="sanskrit-term">prana</span>. It cannot. Prana is not the air that moves through the lungs. Prana is the life-force that the air carries, the vital current that animates every cell, every thought, every flicker of consciousness. The breath is its outer vehicle. The mind is its inner one. To work with the breath is to work with both.</p>
+
+    <p>This is what the ancient yogis discovered, sitting in caves, watching themselves breathe. They saw that when the breath is agitated, the mind is agitated. When the breath is steady, the mind is steady. When the breath stops, in those rare moments of perfect stillness, the mind stops with it. The breath and the mind are not two things. They are two faces of one current.</p>
+
+    <p><span class="sanskrit-term">Pranayama</span>, from <em>prana</em> and <em>ayama</em> meaning <em>extension</em> or <em>regulation</em>, is the science of working with this current directly. Not to control the breath as an end in itself, but to enter, through the breath, the deeper layers of the mind that the breath touches.</p>
+
+    <p>This is why pranayama belongs in Brahma Muhurta. The air is at its most prana-rich before sunrise. The body is rested. The mind has not yet committed to the day. Of all the hours, this is the one in which the practice gives most.</p>
+
+    <h2>Before you begin</h2>
+
+    <p>Pranayama is a powerful practice, and like all powerful practices, it asks for care. A few things to settle before you take your first breath.</p>
+
+    <p><strong>Posture.</strong> Sit with the spine erect. Cross-legged on the floor with a cushion under the hips, kneeling on a meditation bench, or upright on a chair with feet flat. The spine must be vertical so that the breath can flow without obstruction. The shoulders are relaxed. The chin is slightly drawn in. The hands rest in the lap or on the knees.</p>
+
+    <p><strong>Time.</strong> The classical hour is Brahma Muhurta, an hour and a half before sunrise. The stomach should be empty. If you cannot practise then, the next best windows are sunrise itself, midday, and sunset. Avoid practising within two hours after a meal.</p>
+
+    <p><strong>Place.</strong> A clean, ventilated space. Quiet. Not too cold, not too hot. The same place each day, if possible. The space itself begins to hold the practice.</p>
+
+    <p><strong>State.</strong> Never force. Never strain. The first sign of strain is the cue to stop. Pranayama works through subtlety, not effort. If at any point you feel dizzy, breathless, anxious, or unwell, return to natural breathing immediately and rest.</p>
+
+    <aside class="caution">
+      <strong>A word of caution</strong>
+      Pranayama is not a casual practice. Done with care it brings clarity, equanimity, and depth. Done carelessly it can disturb the nervous system and the mind. If you are pregnant, have high or very low blood pressure, heart conditions, severe respiratory illness, recent surgery, glaucoma, or are recovering from acute mental health difficulties, consult a qualified teacher and your physician before practising. Begin gently. Build slowly. Trust your body's signals over any instruction, including these.
+    </aside>
+
+    <h2>Nadi Shodhana</h2>
+
+    <p>The cleansing of the channels. This is the most fundamental of pranayama practices, and the one to learn first. Its work is to balance the two principal energy currents - <span class="sanskrit-term">ida</span>, the cooling lunar current that flows through the left nostril, and <span class="sanskrit-term">pingala</span>, the warming solar current that flows through the right. When these are in balance, the central channel - <span class="sanskrit-term">sushumna</span> - becomes available, and the mind enters meditative stillness almost on its own.</p>
+
+    <p>You will notice, if you sit quietly and observe, that one nostril is usually more open than the other. This shifts naturally throughout the day, every hour or so. Nadi Shodhana works with this rhythm directly, and over time, brings it into balance.</p>
+
+    <div class="practice">
+      <div class="practice-header">
+        <p class="practice-sanskrit">नाडी शोधन</p>
+        <p class="practice-name">Nadi Shodhana</p>
+        <p class="practice-translation">Alternate Nostril Breathing</p>
+      </div>
+
+      <ol>
+        <li>Sit in your chosen posture. Spine erect. Eyes gently closed. Take a few natural breaths and settle.</li>
+        <li>Bring the right hand into <em>Vishnu mudra</em>: fold the index and middle fingers into the palm, leaving the thumb, ring finger, and little finger extended. The thumb will close the right nostril; the ring finger will close the left.</li>
+        <li>Close the right nostril with the thumb. Exhale fully through the left nostril.</li>
+        <li>Inhale slowly and smoothly through the left nostril.</li>
+        <li>Close the left nostril with the ring finger. Release the thumb. Exhale through the right nostril.</li>
+        <li>Inhale through the right nostril.</li>
+        <li>Close the right nostril. Release the ring finger. Exhale through the left.</li>
+        <li>This is one full round. The pattern is: <em>exhale left, inhale left, exhale right, inhale right, exhale left.</em> Continue for nine to twenty-seven rounds.</li>
+        <li>Finish on an exhalation through the left nostril. Lower the hand. Sit quietly for a few minutes and observe the after-effect.</li>
+      </ol>
+
+      <p class="practice-note">Begin with five minutes. Build slowly to fifteen or twenty over weeks and months. The breath should be silent, smooth, and unforced throughout. If you can hear your breath, it is too fast.</p>
+    </div>
+
+    <h2>Bhramari</h2>
+
+    <p>The humming bee breath. Of all the pranayamas, this is the gentlest, the safest, and in some ways the most immediate in its effect. The vibration of the hum, sustained on a long exhalation, soothes the nervous system, quiets the mind, and produces a felt sense of inner space that is difficult to describe and impossible to mistake.</p>
+
+    <p>Bhramari is named after the female black bee, whose humming the practice imitates. It is excellent before meditation, before sleep, and at any moment when the mind is overheated by thought or feeling.</p>
+
+    <div class="practice">
+      <div class="practice-header">
+        <p class="practice-sanskrit">भ्रामरी</p>
+        <p class="practice-name">Bhramari</p>
+        <p class="practice-translation">The Humming Bee Breath</p>
+      </div>
+
+      <ol>
+        <li>Sit in your chosen posture. Spine erect. Eyes gently closed. Take a few natural breaths.</li>
+        <li>Bring the hands to the face. The thumbs gently close the ears. The index fingers rest above the eyebrows. The middle fingers rest lightly on the closed eyelids. The ring fingers touch the sides of the nose. The little fingers rest at the corners of the mouth. This is <em>Shanmukhi mudra</em>, the seal of the six gates. If this feels complex, simply close the ears with the thumbs and let the other fingers rest comfortably on the face.</li>
+        <li>Inhale slowly and deeply through both nostrils.</li>
+        <li>On the exhalation, with mouth closed, produce a steady, smooth humming sound, like the deep hum of a bee. Sustain it for the full length of the exhalation. Feel the vibration in the skull, in the chest, in the whole body.</li>
+        <li>At the end of the exhalation, inhale again, and continue. Begin with seven rounds. Build to fifteen or twenty.</li>
+        <li>When complete, lower the hands. Sit in stillness. Listen to the silence the practice has created.</li>
+      </ol>
+
+      <p class="practice-note">The hum should be low and steady, not strained. Pitch matters less than smoothness. Many students find Bhramari deeply moving on first practice. Let it move you. That is its work.</p>
+    </div>
+
+    <h2>The ratios</h2>
+
+    <p>Once the basic practice is established, the breath can be lengthened in particular proportions. The ratio refers to the relative durations of inhalation, retention, exhalation, and the pause that follows. Different ratios have different effects on the nervous system and the mind. Do not rush to add ratios; the basic practice itself, done daily for some months, is more valuable than complex ratios done occasionally.</p>
+
+    <div class="ratios">
+
+      <div class="ratio-row">
+        <span class="ratio-numbers">1 : 1</span>
+        <div>
+          <span class="ratio-name">Equal Breathing</span>
+          <span class="ratio-desc">Inhale and exhale of the same length. The simplest ratio. Balances and steadies. Good for beginners and for moments of agitation. If you can inhale comfortably for four counts, exhale for four.</span>
+        </div>
+      </div>
+
+      <div class="ratio-row">
+        <span class="ratio-numbers">1 : 2</span>
+        <div>
+          <span class="ratio-name">Extended Exhalation</span>
+          <span class="ratio-desc">The exhalation is twice the length of the inhalation. Deeply calming. Activates the parasympathetic nervous system. Excellent before meditation and before sleep. Inhale for four counts, exhale for eight.</span>
+        </div>
+      </div>
+
+      <div class="ratio-row">
+        <span class="ratio-numbers">1 : 4 : 2</span>
+        <div>
+          <span class="ratio-name">Classical Ratio</span>
+          <span class="ratio-desc">Inhale, hold, exhale, in proportions of one to four to two. The traditional ratio of the Hatha Yoga Pradipika. Powerful, and only to be approached after the basic practice is established and stable. Inhale for four, retain for sixteen, exhale for eight. Begin with smaller numbers - even 2:8:4 - and grow into it.</span>
+        </div>
+      </div>
+
+      <div class="ratio-row">
+        <span class="ratio-numbers">1 : 1 : 1 : 1</span>
+        <div>
+          <span class="ratio-name">Box Breathing</span>
+          <span class="ratio-desc">Inhale, hold, exhale, hold, all of equal length. A clarifying ratio that brings precision to the breath and steadies the mind. Useful when the day demands focus.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>A note on retention</h2>
+
+    <p>The retention of breath - <span class="sanskrit-term">kumbhaka</span> - is the heart of pranayama, and also its most demanding aspect. The classical texts describe it as the moment in which prana is concentrated, in which the mind naturally falls silent, in which the deepest experiences of the practice arise.</p>
+
+    <p>It is also the aspect that most easily causes harm if approached carelessly. The temptation, especially for the eager beginner, is to hold the breath as long as possible, to push, to test the limit. This is precisely the wrong approach. Retention works through ease, not effort. A held breath that creates the slightest strain has already lost its value.</p>
+
+    <p>For this reason, the tradition teaches retention only after the basic practice is steady, only under the guidance of an experienced teacher who can observe and correct, and only in small, gentle increments built up over months and years. This page does not teach kumbhaka in detail for that reason. When the time comes, find a teacher.</p>
+
+    <blockquote class="pull-quote">The breath that is forced is no longer prana.<br>It is only air.</blockquote>
+
+    <h2>Common mistakes</h2>
+
+    <ul class="principles">
+      <li>
+        <strong>Forcing the length</strong>
+        The breath should always feel comfortable. If you are straining to make it longer, you have already gone too far. Let the breath lengthen of its own accord, over weeks and months. The practice grows you; you do not grow the practice.
+      </li>
+      <li>
+        <strong>Practising too long, too soon</strong>
+        Five minutes a day for a year will deepen you. Forty-five minutes a day for two weeks will exhaust the nervous system and dissuade you from the practice altogether. Begin small. Stay small. Let duration grow when it grows by itself.
+      </li>
+      <li>
+        <strong>Skipping the after-stillness</strong>
+        The minutes immediately after pranayama are when the practice does much of its work. The mind is steadier, the inner space is wider, the conditions for meditation are perfect. Do not rush off. Sit. Let the practice finish itself in you.
+      </li>
+      <li>
+        <strong>Practising when unwell</strong>
+        If you are sick, exhausted, congested, or emotionally raw, the practice will not help you in that state. Rest is the practice on those days. Return to the breath when the body is ready.
+      </li>
+      <li>
+        <strong>Adding kumbhaka without guidance</strong>
+        Already addressed above, but worth repeating. The longing to advance is itself a subtle form of attachment that pranayama is designed to dissolve. Do not let it drive the practice.
+      </li>
+    </ul>
+
+    <h2>Where it sits in the practice</h2>
+
+    <p>In the classical morning sequence, pranayama follows asana and precedes meditation. The body has been gently moved and warmed. The breath is then refined. The mind, prepared by both, settles naturally into stillness when the seated practice begins. This is the order the tradition gives, and the order to follow if you can.</p>
+
+    <p>If your morning is short, even five minutes of Nadi Shodhana before sitting will transform the meditation. If your morning is shorter still, three rounds of Bhramari will steady the day. The practice is generous. It gives in proportion to what is offered.</p>
+
+    <div class="benediction">
+      <p>May your breath find its rhythm.<br>May your channels be clear.<br>May the prana that moves through you remember what it is, and lead you home.</p>
+      <span class="om">ॐ</span>
+    </div>
+
+  </article>
+
+  <div class="next-teaching">
+    <p class="next-label">Continue</p>
+    <a href="/teachings/surya-namaskar">Surya Namaskar →</a>
+    <p class="next-desc">Salutations to the sun. The twelve postures, the breath that moves them, and the mantras of the dawn.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+  <a href="/install" class="install-link">Install on your device</a>
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>
