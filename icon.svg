@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#15294e"/>
+      <stop offset="60%" stop-color="#0d1f3d"/>
+      <stop offset="100%" stop-color="#081530"/>
+    </radialGradient>
+    
+    <!-- Polished gold gradient with bright highlight band -->
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b8923f"/>
+      <stop offset="20%" stop-color="#e0c684"/>
+      <stop offset="40%" stop-color="#fff8e0"/>
+      <stop offset="55%" stop-color="#f0d99a"/>
+      <stop offset="75%" stop-color="#e0c684"/>
+      <stop offset="100%" stop-color="#a07f30"/>
+    </linearGradient>
+    
+    <!-- Border gradient - mirrors light coming from upper-left -->
+    <linearGradient id="borderShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff4d0"/>
+      <stop offset="35%" stop-color="#f0d99a"/>
+      <stop offset="60%" stop-color="#c9a558"/>
+      <stop offset="100%" stop-color="#a07f30"/>
+    </linearGradient>
+    
+    <!-- Glow filter for the warm radiation -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Deep navy background -->
+  <rect width="512" height="512" fill="url(#bg)" rx="96"/>
+  
+  <!-- Inset gold border with shine -->
+  <rect x="22" y="22" width="468" height="468" fill="none" stroke="url(#borderShine)" stroke-width="6" rx="78"/>
+  
+  <!-- ॐ with multi-stop polished gold and warm glow -->
+  <text x="256" y="310" font-family="serif" font-size="300" text-anchor="middle" fill="url(#goldShine)" filter="url(#glow)">ॐ</text>
+  
+  <!-- Sanskrit ब्रह्म मुहूर्त in solid warm gold (smaller text, no glow) -->
+  <text x="256" y="430" font-family="serif" font-size="64" text-anchor="middle" fill="#f0d99a" font-weight="400">ब्रह्म मुहूर्त</text>
+</svg>
