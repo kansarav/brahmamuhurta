@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# AI crawlers — the content here is offered freely;
+# we trust crawlers to honour the spirit in which it's given.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://brahmamuhurta.ai/sitemap.xml
