@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ग्रन्थ · Reading List - Brahma Muhurta</title>
+<meta name="description" content="A small, carefully chosen library. The Mandukya Upanishad, Nisargadatta, the Bihar School. Curated, not exhaustive.">
+<link rel="canonical" href="https://brahmamuhurta.ai/teachings/reading-list/">
+<meta name="theme-color" content="#081530">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.15);
+    --glow: rgba(224,198,132,0.08);
+    --surface-hi: #15294e;
+    --gold-bright: #f0d99a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.85;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  h1, article h2 {
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.25em;
+    color: var(--gold); text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+    color: var(--text-dim); text-decoration: none; text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover, .nav-links a.current { color: var(--gold); }
+
+  .page-hero {
+    position: relative;
+    padding: 9rem 2rem 3rem;
+    text-align: center;
+    z-index: 1;
+  }
+  .breadcrumb {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .breadcrumb a { color: var(--gold-dim); text-decoration: none; transition: color 0.3s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .sanskrit {
+    font-family: serif; font-size: 1rem; letter-spacing: 0.3em;
+    color: var(--gold-dim); margin-bottom: 1.5rem;
+  }
+  .page-number {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em;
+    color: var(--gold-dim); margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+  }
+  .lede {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    max-width: 580px;
+    margin: 1.75rem auto 0;
+    line-height: 1.7;
+  }
+  .divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2rem auto;
+  }
+
+  article {
+    position: relative; z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem;
+  }
+
+  .chapter { margin-bottom: 4rem; }
+
+  .chapter-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  article p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.95;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+  article p em { color: var(--gold); font-style: italic; }
+
+  blockquote {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin: 2rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 1px solid var(--gold-dim);
+    line-height: 1.8;
+  }
+  blockquote .source {
+    display: block;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-style: normal;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  .pull-quote {
+    text-align: center;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--gold);
+    line-height: 1.6;
+    margin: 3rem auto;
+    max-width: 500px;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ─── BOOK CARDS ─── */
+  .book {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2.25rem;
+    margin: 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+  .book::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 0% 0%, var(--glow), transparent 60%);
+    pointer-events: none;
+  }
+
+  .book-num {
+    position: relative;
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--gold-dim);
+    font-weight: 300;
+    text-align: center;
+    border-right: 1px solid var(--border);
+    padding-right: 1.25rem;
+    padding-top: 0.2rem;
+    letter-spacing: 0.1em;
+  }
+
+  .book-body {
+    position: relative;
+  }
+
+  .book-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.15rem;
+    color: var(--gold);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .book-author {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-bottom: 0.4rem;
+  }
+
+  .book-meta {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(224,198,132,0.1);
+  }
+
+  .book p {
+    font-size: 1.05rem;
+    margin-bottom: 0.85rem;
+  }
+  .book p:last-child { margin-bottom: 0; }
+
+  .book-edition {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid rgba(224,198,132,0.06);
+  }
+  .book-edition .label {
+    font-family: 'Cinzel', serif;
+    font-style: normal;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .nav-back {
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 0.8rem 1.75rem;
+    transition: all 0.3s;
+  }
+  .nav-back:hover { border-color: var(--gold); color: var(--gold); }
+
+  footer {
+    position: relative; z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+  .om {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+    .nav-links a { font-size: 0.6rem; }
+    article { padding: 1rem 1.5rem 4rem; }
+    .book {
+      padding: 1.75rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .book-num {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding-right: 0;
+      padding-bottom: 1rem;
+      text-align: left;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="/#calculator">The Hour</a></li>
+    <li><a href="/#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/" class="current">Teachings</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <p class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; <a href="/teachings/">Teachings</a> &nbsp;·&nbsp; Reading List</p>
+  <p class="sanskrit">ग्रन्थ</p>
+  <p class="page-number">Chapter 09</p>
+  <div class="divider"></div>
+  <h1>Reading List</h1>
+  <p class="lede">A small, carefully chosen library. The Mandukya Upanishad, Nisargadatta, the Bihar School. Curated, not exhaustive.</p>
+</header>
+
+<article>
+
+<!-- ─── INTRO ─── -->
+<section class="chapter">
+  <p>The yogic literature is vast. A practitioner could spend a lifetime reading and never reach the bottom of it. This is not a bibliography. It is a small shelf - the books a serious practitioner of Brahma Muhurta might keep within arm's reach of the cushion, returning to them in different seasons, taking from them what each season can hold.</p>
+
+  <p>Each book here has been included for a specific reason, and the reasons are stated. Each is paired with the edition or translation worth seeking out. The list is offered with a single piece of advice, which the tradition itself gives: <em>read slowly, and re-read</em>. A single verse of an Upanishad, properly absorbed, will do more for the practice than ten books rushed through.</p>
+
+  <div class="pull-quote">A small library, read deeply, is a teacher. A large library, read shallowly, is a distraction.</div>
+</section>
+
+<!-- ─── PRIMARY SOURCES ─── -->
+<section class="chapter">
+  <p class="chapter-label">I · The Primary Sources</p>
+  <h2>The Source Texts</h2>
+
+  <p>These are the foundational scriptures of the tradition. They are short. They reward an entire lifetime of return. Begin here.</p>
+
+  <div class="book">
+    <span class="book-num">01</span>
+    <div class="book-body">
+      <h3 class="book-title">The Bhagavad Gita</h3>
+      <p class="book-author">Vyasa · c. 200 BCE</p>
+      <p class="book-meta">700 verses · Sanskrit original</p>
+      <p>The single most-loved scripture of the Indian tradition, and rightly so. Krishna teaches Arjuna on the battlefield - but the battlefield is the practitioner's own mind, and the war is the war of self-knowledge. Chapter 6 in particular, "The Yoga of Meditation," is the closest thing the tradition has to a manual for the seated practice.</p>
+      <p>Read it the first time as a story. Read it the second time as a manual. Read it the third time as a description of what is already happening in you.</p>
+      <p class="book-edition"><span class="label">Recommended translation</span>Eknath Easwaran's edition for first-time readers. Swami Gambhirananda's edition (with Shankara's commentary) for deeper study.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">02</span>
+    <div class="book-body">
+      <h3 class="book-title">The Yoga Sutras of Patanjali</h3>
+      <p class="book-author">Patanjali · c. 200 BCE - 400 CE</p>
+      <p class="book-meta">196 aphorisms · Sanskrit original</p>
+      <p>The systematic philosophy of yoga, compressed into 196 brief aphorisms. Patanjali defines yoga in the second sutra and spends the rest of the text unfolding what he meant. The eightfold path - <em>yama, niyama, asana, pranayama, pratyahara, dharana, dhyana, samadhi</em> - is laid out here for the first time.</p>
+      <p>The sutras are unreadable without commentary. Choose your commentator with care; they will substantially shape how you read the text.</p>
+      <p class="book-edition"><span class="label">Recommended translation</span>Edwin Bryant's edition presents multiple classical commentaries side by side. Iyengar's <em>Light on the Yoga Sutras</em> is more accessible and reflects a lived practice.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">03</span>
+    <div class="book-body">
+      <h3 class="book-title">The Mandukya Upanishad</h3>
+      <p class="book-author">Anonymous · c. 800 BCE</p>
+      <p class="book-meta">12 verses · Sanskrit original</p>
+      <p>The shortest of the principal Upanishads, and considered by the tradition to be sufficient on its own for liberation. In twelve verses, it lays out the four states of consciousness - waking, dreaming, deep sleep, and <em>turiya</em>, the witnessing awareness that holds them all. The teaching of the Four States, treated in Chapter 04 of this site, is drawn from here.</p>
+      <p>It is short enough to memorise. The tradition strongly recommends doing so.</p>
+      <p class="book-edition"><span class="label">Recommended translation</span>Swami Nikhilananda's edition with Gaudapada's <em>karika</em> - Gaudapada was Shankara's grand-teacher, and his commentary is itself a foundational text.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">04</span>
+    <div class="book-body">
+      <h3 class="book-title">The Upanishads (Principal)</h3>
+      <p class="book-author">Various · c. 800 - 200 BCE</p>
+      <p class="book-meta">Ten or twelve principal texts</p>
+      <p>The crown of Indian metaphysical literature. The Isha, Kena, Katha, Prashna, Mundaka, Chandogya, Brihadaranyaka, Aitareya, Taittiriya, and Mandukya - these are the ten principal Upanishads, with the Shvetashvatara and Maitri sometimes added. They do not present a doctrine so much as a series of poetic confrontations with the question: <em>what is the Self?</em></p>
+      <p>Begin with the Isha (eighteen verses) and the Katha (the dialogue of a boy with Death). These two will tell you whether you want to read the others.</p>
+      <p class="book-edition"><span class="label">Recommended translation</span>Eknath Easwaran for first encounter; Swami Lokeswarananda's Ramakrishna Mission editions for substantive commentary. Patrick Olivelle's Oxford edition for scholarly rigour.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">05</span>
+    <div class="book-body">
+      <h3 class="book-title">The Hatha Yoga Pradipika</h3>
+      <p class="book-author">Svatmarama · c. 15th century CE</p>
+      <p class="book-meta">389 verses · Sanskrit original</p>
+      <p>The classical manual of hatha yoga - asana, pranayama, mudra, bandha, and the energetic theory that underlies them. This is the closest thing the tradition has to a technical reference, and it remains the source from which most modern hatha traditions ultimately derive.</p>
+      <p>Read it after some practice. The instructions make almost no sense before the body has begun to recognise what is being described.</p>
+      <p class="book-edition"><span class="label">Recommended translation</span>Swami Muktibodhananda's edition, published by the Bihar School of Yoga - extensive commentary that connects classical instructions to modern practice.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MODERN VOICES ─── -->
+<section class="chapter">
+  <p class="chapter-label">II · The Living Voices</p>
+  <h2>The Modern Teachers</h2>
+
+  <p>The tradition did not stop. The twentieth century produced teachers whose words are, in their own way, as important as the classical scriptures - because they speak in the language of our own era, to the questions our era actually asks.</p>
+
+  <div class="book">
+    <span class="book-num">06</span>
+    <div class="book-body">
+      <h3 class="book-title">I Am That</h3>
+      <p class="book-author">Sri Nisargadatta Maharaj · 1973</p>
+      <p class="book-meta">Dialogues recorded in Bombay · 1970–1973</p>
+      <p>If only one modern book of non-dual teaching could be kept, it would be this one. Nisargadatta - a tobacco-shop owner who became one of the most penetrating teachers of the twentieth century - answers questions in his small room in Khetwadi, Bombay, with a directness that allows no escape. The book is not a system. It is a series of attacks on every position the seeker takes.</p>
+      <p>Open at any page. Read for ten minutes. Sit.</p>
+      <p class="book-edition"><span class="label">Edition</span>The Acorn Press edition, translated by Maurice Frydman. Other translations exist; this remains the standard.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">07</span>
+    <div class="book-body">
+      <h3 class="book-title">Talks with Ramana Maharshi</h3>
+      <p class="book-author">Sri Ramana Maharshi · recorded 1935–1939</p>
+      <p class="book-meta">Recorded dialogues at Sri Ramanasramam</p>
+      <p>Ramana was perhaps the most universally respected figure of twentieth-century Indian spirituality - a man who, at sixteen, went into a death-meditation, emerged transformed, and spent the next fifty-four years answering questions on the slopes of Arunachala. His central teaching is the practice of <em>self-enquiry</em> - the question "Who am I?" - taken not as philosophy but as a meditative instruction.</p>
+      <p>Less aggressive than Nisargadatta, more gentle, slower. A different temperament; the same destination.</p>
+      <p class="book-edition"><span class="label">Edition</span>The Sri Ramanasramam edition, recorded by Munagala Venkataramiah. <em>Be As You Are</em>, edited by David Godman, is the best introductory anthology.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">08</span>
+    <div class="book-body">
+      <h3 class="book-title">Yoga Nidra</h3>
+      <p class="book-author">Swami Satyananda Saraswati · 1976</p>
+      <p class="book-meta">The Bihar School of Yoga · Munger, India</p>
+      <p>The definitive modern manual of the Yoga Nidra practice featured on this site. Satyananda gathered the technique from the classical tantric tradition and codified it into the form now practised worldwide. The book covers the theoretical underpinnings, the full traditional script, and the application of Yoga Nidra to various conditions of mind and body.</p>
+      <p>If the Yoga Nidra practice on this site has called to you, this is the next step.</p>
+      <p class="book-edition"><span class="label">Edition</span>Yoga Publications Trust, Munger. Multiple editions; any will do.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">09</span>
+    <div class="book-body">
+      <h3 class="book-title">Asana Pranayama Mudra Bandha</h3>
+      <p class="book-author">Swami Satyananda Saraswati · 1969 (revised 1996)</p>
+      <p class="book-meta">The Bihar School of Yoga · Munger, India</p>
+      <p>The single most comprehensive technical reference for hatha yoga practice in modern English. Every asana, every pranayama, every mudra, every bandha is described, illustrated, and contextualised. The book runs to over five hundred pages and is more dense than it looks; treat it as a reference, not a cover-to-cover read.</p>
+      <p>Practitioners of Brahma Muhurta will find Chapter 8 on pranayama and Chapter 11 on the bandhas particularly relevant.</p>
+      <p class="book-edition"><span class="label">Edition</span>Yoga Publications Trust, Munger. The fourth edition is current.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">10</span>
+    <div class="book-body">
+      <h3 class="book-title">Autobiography of a Yogi</h3>
+      <p class="book-author">Paramahansa Yogananda · 1946</p>
+      <p class="book-meta">Self-Realization Fellowship · Los Angeles</p>
+      <p>Included not because of its philosophical depth - there are deeper books - but because of what it does to those who read it at the right moment in life. Yogananda was the first major Indian teacher to bring kriya yoga to the West, and his autobiography is part spiritual journey, part travelogue, part hagiography of the teachers he encountered.</p>
+      <p>The book is on the reading list of many practitioners for a reason. Read it for the warmth, the stories, and the unmistakable presence of the author behind every page.</p>
+      <p class="book-edition"><span class="label">Edition</span>The 1946 first edition (out of copyright and freely available) is preferred by many over the later revised editions.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── BEYOND ─── -->
+<section class="chapter">
+  <p class="chapter-label">III · Beyond the Tradition</p>
+  <h2>The Wider Library</h2>
+
+  <p>The Indian tradition is not the only source of contemplative wisdom. The following four books, though belonging to other lineages, sit beside the Indian texts in the library of anyone who reads widely. Each is included because it confirms, in a different vocabulary, what the Indian tradition is saying.</p>
+
+  <div class="book">
+    <span class="book-num">11</span>
+    <div class="book-body">
+      <h3 class="book-title">The Cloud of Unknowing</h3>
+      <p class="book-author">Anonymous · 14th century England</p>
+      <p class="book-meta">Middle English original · contemplative monastic tradition</p>
+      <p>The masterpiece of the Christian contemplative tradition. An anonymous English monk, writing to a younger novice, lays out a method of contemplative prayer that is nearly indistinguishable from raja yoga meditation - the rest of all thought, the single word held in the heart, the surrender of the seeking mind into the silence beyond the seeking.</p>
+      <p>That the same instructions appear, almost verbatim, in fourteenth-century England and in the Yoga Sutras is one of the quiet miracles of comparative spiritual literature.</p>
+      <p class="book-edition"><span class="label">Edition</span>The Penguin Classics edition, translated by Clifton Wolters.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">12</span>
+    <div class="book-body">
+      <h3 class="book-title">The Tao Te Ching</h3>
+      <p class="book-author">Attributed to Lao Tzu · c. 4th century BCE</p>
+      <p class="book-meta">81 chapters · Classical Chinese original</p>
+      <p>Eighty-one short chapters, each turning a single paradox in the light. The Tao Te Ching is not a manual of practice - it is a description of the practitioner who has, somehow, arrived. The non-action that accomplishes everything. The water that overcomes stone. The sage who does nothing, and nothing is left undone.</p>
+      <p>Read one chapter in the morning, before sitting. Let it stay with you through the day.</p>
+      <p class="book-edition"><span class="label">Recommended translation</span>Ursula K. Le Guin's edition is loved by many practitioners. D.C. Lau's Penguin edition is more scholarly. Stephen Mitchell's is more poetic.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">13</span>
+    <div class="book-body">
+      <h3 class="book-title">The Essential Rumi</h3>
+      <p class="book-author">Jalaluddin Rumi · 13th century · trans. Coleman Barks</p>
+      <p class="book-meta">Sufi mystical poetry</p>
+      <p>The Sufi mystical tradition speaks in the language of love, longing, and intoxication where the Indian tradition speaks in the language of analysis and recognition. The destination is the same. The map is in a different alphabet.</p>
+      <p>Rumi is particularly close to the practitioner of Brahma Muhurta - his most famous poems are set in the pre-dawn hour, and the "breeze at dawn" is one of his recurring images for the moment of inner opening.</p>
+      <p class="book-edition"><span class="label">Edition</span>Coleman Barks's translations, though loose, are the most lyrical. For accuracy, Reynold Nicholson's older but more literal versions of the <em>Masnavi</em> remain standard.</p>
+    </div>
+  </div>
+
+  <div class="book">
+    <span class="book-num">14</span>
+    <div class="book-body">
+      <h3 class="book-title">Meditations</h3>
+      <p class="book-author">Marcus Aurelius · c. 170–180 CE</p>
+      <p class="book-meta">Twelve books of personal notes · Greek original</p>
+      <p>The private journal of a Roman emperor who was also a serious Stoic philosopher, written for himself and never intended for publication. There is no doctrine here. There is the daily work of a man trying to live well, written down each morning before the day begins.</p>
+      <p>The Stoic morning practice - examination of the coming day, anticipation of difficulty, reaffirmation of one's principles - has its own resonance with the Brahma Muhurta sit. Marcus is included not as a yogi (he was not) but as a fellow practitioner of the dawn hour.</p>
+      <p class="book-edition"><span class="label">Recommended translation</span>Gregory Hays's Modern Library edition. Plain English, present-tense, the voice of someone speaking to himself.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW TO READ ─── -->
+<section class="chapter">
+  <p class="chapter-label">IV · A Note on Reading</p>
+  <h2>How to Read These Books</h2>
+
+  <p>The reading of contemplative literature is itself a practice, and one that bears almost no resemblance to ordinary reading. A few notes:</p>
+
+  <p><em>Read slowly.</em> Not "slowly" in the relative sense - slowly in the absolute sense. A single sutra of Patanjali, read once with full attention, may take ten minutes. A page of the Bhagavad Gita may take half an hour. The traditions did not produce these texts to be consumed. They produced them to be inhabited.</p>
+
+  <p><em>Re-read.</em> The first reading shows you the surface. The second shows you what you missed. The fifth, ten years later, shows you a book you did not know existed inside the book you thought you had read. The reading list above is a list of books to re-read across a lifetime - not a list to complete.</p>
+
+  <p><em>Read in the morning.</em> Before the world has filled your mind with its noise, fifteen minutes of contemplative reading sets the tone of the day. After the sit, before breakfast, is the traditional window.</p>
+
+  <p><em>Read with a notebook.</em> Not to take notes in the academic sense - but to copy out, by hand, the lines that strike you. Handwriting slows the eye. The line that you copy out is the line that begins to live in you.</p>
+
+  <p><em>When you do not understand, sit with not understanding.</em> The temptation is to reach for commentary, to look up the term, to resolve the difficulty. Resist this for some time. Many of the great traditions teach that the unresolved verse, held in the mind across days or weeks, opens of its own accord. The commentaries are useful, but they are not the practice.</p>
+
+  <blockquote>
+    To read a sacred text is to allow it to read you. Lay yourself open before the page. Let the text find what is in you.
+    <span class="source">A teaching from the contemplative tradition</span>
+  </blockquote>
+</section>
+
+<!-- ─── CLOSING ─── -->
+<section class="chapter">
+  <p class="chapter-label">V · A Closing Note</p>
+  <h2>What Is Not Here</h2>
+
+  <p>This list is short on purpose. The world is full of spiritual books, and most of them are not necessary. The fourteen books above can sustain a serious practice for the entirety of a life. Several of them have done so, for some practitioners.</p>
+
+  <p>Many notable books have been left out. Books by living teachers - Jack Kornfield, Ram Dass, Thich Nhat Hanh, Adyashanti - are excellent, and have been omitted only because the focus here is on the texts that have already proved themselves across generations. Books by classical Vedantic masters - Shankara, Vidyaranya, Vivekananda - have been omitted for being too dense for most practitioners' early years. The Tantric texts, the Kashmir Shaivism literature, the deeper layers of the Sufi tradition - all left out, deliberately. The aim is a small library, not a complete one.</p>
+
+  <p>What is not on this list may matter to you. Follow your own thread. When a book finds you, it has its reasons. The list above is one possible starting point; it is not a closed canon.</p>
+
+  <div class="pull-quote">Read less. Read again. Sit.</div>
+
+  <div style="text-align: center;">
+    <a href="/teachings/" class="nav-back">← Return to Teachings</a>
+  </div>
+</section>
+
+</article>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+</footer>
+
+</body>
+</html>

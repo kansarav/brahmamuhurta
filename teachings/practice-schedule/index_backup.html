@@ -3,20 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>मार्ग · The Practice Schedule - Brahma Muhurta</title>
+<title>मार्ग · The Practice Schedule — Brahma Muhurta</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #080a0f;
-    --surface: #0d1117;
-    --gold: #c8a96e;
-    --gold-dim: #7a6340;
-    --text: #d4c9b8;
-    --text-dim: #7a7368;
-    --border: rgba(200,169,110,0.15);
-    --glow: rgba(200,169,110,0.06);
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.15);
+    --glow: rgba(224,198,132,0.08);
+    --surface-hi: #15294e;
+    --gold-bright: #f0d99a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -24,7 +26,7 @@
     background: var(--bg);
     color: var(--text);
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 1.85;
     min-height: 100vh;
     overflow-x: hidden;
@@ -34,26 +36,59 @@
     position: fixed;
     inset: 0;
     background-image:
-      radial-gradient(1px 1px at 20% 15%, rgba(200,169,110,0.4) 0%, transparent 100%),
-      radial-gradient(1px 1px at 80% 25%, rgba(200,169,110,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
       radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 65% 40%, rgba(200,169,110,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
       radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
-      radial-gradient(1px 1px at 90% 70%, rgba(200,169,110,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
       radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
-      radial-gradient(1px 1px at 72% 90%, rgba(200,169,110,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
       radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
-      radial-gradient(1px 1px at 5% 35%, rgba(200,169,110,0.2) 0%, transparent 100%);
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
     pointer-events: none;
     z-index: 0;
   }
+
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Shimmer on hero title and section titles */
+  h1, article h2 {
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, #f0d99a 40%, #fff4d0 50%, #f0d99a 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  /* Breadcrumb */
+  .breadcrumb {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .breadcrumb a {
+    color: var(--gold-dim);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .breadcrumb a:hover { color: var(--gold); }
 
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 1.2rem 3rem;
-    background: rgba(8,10,15,0.85);
+    background: rgba(8,21,48,0.85);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
@@ -333,7 +368,7 @@
   .variant-tab.active {
     border-color: var(--gold);
     color: var(--gold);
-    background: rgba(200,169,110,0.06);
+    background: rgba(224,198,132,0.08);
   }
   .variant-tab:hover { border-color: var(--gold-dim); color: var(--text); }
 
@@ -396,15 +431,16 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">Brahma Muhurta</a>
+  <a href="/" class="nav-logo">Brahma Muhurta</a>
   <ul class="nav-links">
-    <li><a href="index.html#calculator">The Hour</a></li>
-    <li><a href="index.html#yoga-nidra">Yoga Nidra</a></li>
-    <li><a href="index.html#about">About</a></li>
+    <li><a href="/#calculator">The Hour</a></li>
+    <li><a href="/#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/" class="current">Teachings</a></li>
   </ul>
 </nav>
 
 <header class="page-hero">
+  <p class="breadcrumb"><a href="/">Home</a> &nbsp;·&nbsp; <a href="/teachings/">Teachings</a> &nbsp;·&nbsp; The Practice Schedule</p>
   <p class="sanskrit">मार्ग</p>
   <p class="page-number">Chapter 06</p>
   <div class="divider"></div>
@@ -416,9 +452,9 @@
 
 <!-- ─── OPENING ─── -->
 <section class="chapter">
-  <p>The hour does not unfold by itself. It must be shaped. The traditional <em>sadhana</em> of Brahma Muhurta is not a single practice but a sequence - each stage preparing the body and mind for the one that follows. Water for the body. Breath for the channels. Posture for the seat. Stillness for the mind.</p>
+  <p>The hour does not unfold by itself. It must be shaped. The traditional <em>sadhana</em> of Brahma Muhurta is not a single practice but a sequence — each stage preparing the body and mind for the one that follows. Water for the body. Breath for the channels. Posture for the seat. Stillness for the mind.</p>
 
-  <p>What follows is a complete schedule, drawn from the classical hatha and raja yoga traditions. It is offered in three forms - full, abbreviated, and minimal - so that the practice can meet you wherever you stand on the path.</p>
+  <p>What follows is a complete schedule, drawn from the classical hatha and raja yoga traditions. It is offered in three forms — full, abbreviated, and minimal — so that the practice can meet you wherever you stand on the path.</p>
 
   <p>The total span is one and a half hours, ending precisely as the sun crosses the horizon. The first stirring is in darkness. The closing is in light. Between them, you cross.</p>
 </section>
@@ -432,14 +468,14 @@
 
   <h3>The Five Sheaths</h3>
 
-  <p>Vedantic teaching describes the human being as five concentric sheaths - <em>panchakosha</em> - each more subtle than the last:</p>
+  <p>Vedantic teaching describes the human being as five concentric sheaths — <em>panchakosha</em> — each more subtle than the last:</p>
 
   <ol>
-    <li><em>Annamaya kosha</em> - the physical body, the food sheath. Addressed by hygiene, water, and movement.</li>
-    <li><em>Pranamaya kosha</em> - the vital energy sheath. Addressed by pranayama.</li>
-    <li><em>Manomaya kosha</em> - the mental sheath. Addressed by mantra and concentration.</li>
-    <li><em>Vijnanamaya kosha</em> - the wisdom sheath. Addressed by meditation.</li>
-    <li><em>Anandamaya kosha</em> - the bliss sheath. Revealed when the others have settled.</li>
+    <li><em>Annamaya kosha</em> — the physical body, the food sheath. Addressed by hygiene, water, and movement.</li>
+    <li><em>Pranamaya kosha</em> — the vital energy sheath. Addressed by pranayama.</li>
+    <li><em>Manomaya kosha</em> — the mental sheath. Addressed by mantra and concentration.</li>
+    <li><em>Vijnanamaya kosha</em> — the wisdom sheath. Addressed by meditation.</li>
+    <li><em>Anandamaya kosha</em> — the bliss sheath. Revealed when the others have settled.</li>
   </ol>
 
   <p>The morning practice moves systematically inward through these layers. Each stage prepares the layer beneath it. To skip a layer is to leave the deeper work resting on an unsteady foundation.</p>
@@ -452,7 +488,7 @@
   <p class="chapter-label">II · The Sequence</p>
   <h2>The Full Practice</h2>
 
-  <p>Choose the form that matches the season of your practice. The full sequence requires ninety minutes and is the traditional form. The abbreviated sequence - forty-five minutes - is appropriate when life is dense. The minimal sequence - twenty minutes - is for the early days, and for the days when twenty minutes is what you have.</p>
+  <p>Choose the form that matches the season of your practice. The full sequence requires ninety minutes and is the traditional form. The abbreviated sequence — forty-five minutes — is appropriate when life is dense. The minimal sequence — twenty minutes — is for the early days, and for the days when twenty minutes is what you have.</p>
 
   <div class="variant-tabs">
     <button class="variant-tab active" onclick="showVariant(event, 'full')">Full · 90 min</button>
@@ -480,7 +516,7 @@
           <p class="stage-time">−80 min · Salutation</p>
           <p class="stage-name">Surya Namaskar</p>
           <p class="stage-sanskrit">सूर्य नमस्कार</p>
-          <p class="stage-desc">Twelve rounds of Sun Salutation. Move with the breath. This warms the body, opens the spine, and circulates prana. Not for fitness - for preparation. Each round is a quiet offering to the sun that has not yet risen.</p>
+          <p class="stage-desc">Twelve rounds of Sun Salutation. Move with the breath. This warms the body, opens the spine, and circulates prana. Not for fitness — for preparation. Each round is a quiet offering to the sun that has not yet risen.</p>
           <span class="stage-duration">10 minutes</span>
         </div>
 
@@ -488,7 +524,7 @@
           <p class="stage-time">−70 min · Asana</p>
           <p class="stage-name">Hatha Sequence</p>
           <p class="stage-sanskrit">आसन</p>
-          <p class="stage-desc">A short sequence of holding postures. Forward fold, spinal twist, shoulder stand or legs-up-the-wall, fish pose, child's pose. Each held for several breaths. The aim is not flexibility but stillness inside movement - and the readying of the spine for long sitting.</p>
+          <p class="stage-desc">A short sequence of holding postures. Forward fold, spinal twist, shoulder stand or legs-up-the-wall, fish pose, child's pose. Each held for several breaths. The aim is not flexibility but stillness inside movement — and the readying of the spine for long sitting.</p>
           <span class="stage-duration">15 minutes</span>
         </div>
 
@@ -496,7 +532,7 @@
           <p class="stage-time">−55 min · Cleansing Breath</p>
           <p class="stage-name">Kapalabhati</p>
           <p class="stage-sanskrit">कपालभाति</p>
-          <p class="stage-desc">Three rounds of skull-shining breath. Short, sharp exhalations through the nose; passive inhalations. Sixty breaths per round, with rest between. This clears the lungs and lights the inner fire. Approach with care - do not force.</p>
+          <p class="stage-desc">Three rounds of skull-shining breath. Short, sharp exhalations through the nose; passive inhalations. Sixty breaths per round, with rest between. This clears the lungs and lights the inner fire. Approach with care — do not force.</p>
           <span class="stage-duration">5 minutes</span>
         </div>
 
@@ -504,7 +540,7 @@
           <p class="stage-time">−50 min · Balancing Breath</p>
           <p class="stage-name">Nadi Shodhana</p>
           <p class="stage-sanskrit">नाडी शोधन</p>
-          <p class="stage-desc">Alternate nostril breathing. Slow, even rounds - inhale left, exhale right, inhale right, exhale left. Begin without retention. Add retention only when the breath has lengthened naturally. This balances the solar and lunar channels and prepares the mind for stillness.</p>
+          <p class="stage-desc">Alternate nostril breathing. Slow, even rounds — inhale left, exhale right, inhale right, exhale left. Begin without retention. Add retention only when the breath has lengthened naturally. This balances the solar and lunar channels and prepares the mind for stillness.</p>
           <span class="stage-duration">10 minutes</span>
         </div>
 
@@ -512,7 +548,7 @@
           <p class="stage-time">−40 min · Sacred Sound</p>
           <p class="stage-name">Mantra Japa</p>
           <p class="stage-sanskrit">मन्त्र जप</p>
-          <p class="stage-desc">Recitation of a chosen mantra, traditionally on a mala of 108 beads. <em>Om</em>, the Gayatri, the Maha Mrityunjaya, or the name given by your teacher. The sound itself is the practice - let it move from voice, to whisper, to silent repetition in the heart.</p>
+          <p class="stage-desc">Recitation of a chosen mantra, traditionally on a mala of 108 beads. <em>Om</em>, the Gayatri, the Maha Mrityunjaya, or the name given by your teacher. The sound itself is the practice — let it move from voice, to whisper, to silent repetition in the heart.</p>
           <span class="stage-duration">10 minutes</span>
         </div>
 
@@ -528,7 +564,7 @@
           <p class="stage-time">−5 min · Closing</p>
           <p class="stage-name">Sankalpa and Salutation</p>
           <p class="stage-sanskrit">सङ्कल्प</p>
-          <p class="stage-desc">Bring the heartfelt resolve - the Sankalpa - to mind three times. Bow to the lineage that has carried this teaching to you. Bow to the sun now rising. Open the eyes slowly. Carry the silence forward into the day.</p>
+          <p class="stage-desc">Bring the heartfelt resolve — the Sankalpa — to mind three times. Bow to the lineage that has carried this teaching to you. Bow to the sun now rising. Open the eyes slowly. Carry the silence forward into the day.</p>
           <span class="stage-duration">5 minutes</span>
         </div>
 
@@ -637,19 +673,19 @@
 
   <h3>Begin Where You Can Sustain</h3>
 
-  <p>The greatest mistake of the beginner is to start with the full schedule and abandon it within a month. The greatest wisdom is to start with the minimal form and never miss a day. Consistency is the soil. Length is the harvest. The harvest will come - but only if the soil is tended every morning.</p>
+  <p>The greatest mistake of the beginner is to start with the full schedule and abandon it within a month. The greatest wisdom is to start with the minimal form and never miss a day. Consistency is the soil. Length is the harvest. The harvest will come — but only if the soil is tended every morning.</p>
 
   <h3>Hold the Sequence, Not the Clock</h3>
 
-  <p>The minutes given are guides, not rules. Some mornings the breath will lengthen on its own and pranayama will take longer. Some mornings the seat will fall into stillness quickly. Trust the practice. Hold the shape - water, movement, breath, sit, close - and let the proportions breathe.</p>
+  <p>The minutes given are guides, not rules. Some mornings the breath will lengthen on its own and pranayama will take longer. Some mornings the seat will fall into stillness quickly. Trust the practice. Hold the shape — water, movement, breath, sit, close — and let the proportions breathe.</p>
 
   <h3>The Same Hour, The Same Place</h3>
 
-  <p>Choose a corner of your dwelling and consecrate it. A clean rug, a cushion, perhaps a small lamp and a single image of the lineage you trust. Return to this place every morning. The space itself begins to hold the practice - and on the difficult mornings, the room remembers what the practitioner has forgotten.</p>
+  <p>Choose a corner of your dwelling and consecrate it. A clean rug, a cushion, perhaps a small lamp and a single image of the lineage you trust. Return to this place every morning. The space itself begins to hold the practice — and on the difficult mornings, the room remembers what the practitioner has forgotten.</p>
 
   <h3>Do Not Eat Before Sitting</h3>
 
-  <p>The morning practice is performed on an empty stomach. The body's energy is then available for inward work rather than digestion. After the closing, the day's first food can be taken - and traditionally, it is taken in silence.</p>
+  <p>The morning practice is performed on an empty stomach. The body's energy is then available for inward work rather than digestion. After the closing, the day's first food can be taken — and traditionally, it is taken in silence.</p>
 
   <blockquote>
     Yoga is not for one who eats too much, nor for one who eats nothing. Not for one who sleeps too long, nor for one who is constantly awake.
@@ -669,7 +705,7 @@
   <div class="pull-quote">Begin small. Begin now. Begin tomorrow.</div>
 
   <div style="text-align: center;">
-    <a href="index.html" class="nav-back">← Return Home</a>
+    <a href="/teachings/" class="nav-back">← Return to Teachings</a>
   </div>
 </section>
 
