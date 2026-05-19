@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#081530">
+<title>मार्ग · The Practice Schedule - Brahma Muhurta</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --gold: #c8a96e;
+    --gold-dim: #7a6340;
+    --text: #d4c9b8;
+    --text-dim: #7a7368;
+    --border: rgba(200,169,110,0.15);
+    --glow: rgba(200,169,110,0.06);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(200,169,110,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(200,169,110,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(200,169,110,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(200,169,110,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(200,169,110,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(200,169,110,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif; font-size: 0.85rem; letter-spacing: 0.25em;
+    color: var(--gold); text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.2em;
+    color: var(--text-dim); text-decoration: none; text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .page-hero {
+    position: relative;
+    padding: 9rem 2rem 3rem;
+    text-align: center;
+    z-index: 1;
+  }
+  .sanskrit {
+    font-family: serif; font-size: 1rem; letter-spacing: 0.3em;
+    color: var(--gold-dim); margin-bottom: 1.5rem;
+  }
+  .page-number {
+    font-family: 'Cinzel', serif; font-size: 0.6rem; letter-spacing: 0.4em;
+    color: var(--gold-dim); margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    line-height: 1.2;
+  }
+  .lede {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    max-width: 540px;
+    margin: 1.75rem auto 0;
+    line-height: 1.7;
+  }
+  .divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2rem auto;
+  }
+
+  article {
+    position: relative; z-index: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 2rem 5rem;
+  }
+
+  .chapter { margin-bottom: 4rem; }
+
+  .chapter-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 2.5rem 0 1rem;
+  }
+
+  article p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.95;
+    margin-bottom: 1.25rem;
+    color: var(--text);
+  }
+  article p em { color: var(--gold); font-style: italic; }
+
+  blockquote {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin: 2rem 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 1px solid var(--gold-dim);
+    line-height: 1.8;
+  }
+  blockquote .source {
+    display: block;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-style: normal;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  .pull-quote {
+    text-align: center;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    color: var(--gold);
+    line-height: 1.6;
+    margin: 3rem auto;
+    max-width: 500px;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sanskrit-term {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* ─── SCHEDULE TIMELINE ─── */
+  .timeline {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 2.5rem 2rem;
+    margin: 2.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+
+  .timeline-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+  .timeline-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline-track {
+    position: relative;
+    padding-left: 2.5rem;
+  }
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 0.6rem;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold-dim), var(--border));
+  }
+
+  .stage {
+    position: relative;
+    margin-bottom: 2.25rem;
+    padding-bottom: 1.5rem;
+  }
+  .stage:last-child { margin-bottom: 0; padding-bottom: 0; }
+
+  .stage::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 0.6rem;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--gold-dim);
+    z-index: 1;
+  }
+  .stage:first-child::before {
+    background: var(--gold);
+    box-shadow: 0 0 12px rgba(200,169,110,0.6);
+  }
+
+  .stage-time {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+  }
+  .stage-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  .stage-sanskrit {
+    font-family: serif;
+    font-size: 0.9rem;
+    color: var(--gold-dim);
+    margin-bottom: 0.4rem;
+  }
+  .stage-desc {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+  .stage-duration {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+  }
+
+  /* Variant selector */
+  .variant-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .variant-tab {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--border);
+    padding: 0.6rem 1.25rem;
+    color: var(--text-dim);
+    transition: all 0.3s;
+  }
+  .variant-tab.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(200,169,110,0.06);
+  }
+  .variant-tab:hover { border-color: var(--gold-dim); color: var(--text); }
+
+  .variant-pane { display: none; }
+  .variant-pane.active { display: block; }
+
+  ol, ul {
+    margin: 1rem 0 1.5rem 0;
+    padding-left: 1.5rem;
+  }
+  ol li, ul li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    line-height: 1.85;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .nav-back {
+    display: inline-block;
+    margin-top: 2rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 0.8rem 1.75rem;
+    transition: all 0.3s;
+  }
+  .nav-back:hover { border-color: var(--gold); color: var(--gold); }
+
+  footer {
+    position: relative; z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+  .om { font-size: 1.5rem; color: var(--gold-dim); display: block; margin-bottom: 0.75rem; }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.5rem; }
+    .nav-links a { font-size: 0.6rem; }
+    article { padding: 1rem 1.5rem 4rem; }
+    .timeline { padding: 1.75rem 1.25rem; }
+    .timeline-track { padding-left: 2rem; }
+    .stage::before { left: -2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="index.html#calculator">The Hour</a></li>
+    <li><a href="index.html#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="index.html#about">About</a></li>
+  </ul>
+</nav>
+
+<header class="page-hero">
+  <p class="sanskrit">मार्ग</p>
+  <p class="page-number">Chapter 06</p>
+  <div class="divider"></div>
+  <h1>The Practice Schedule</h1>
+  <p class="lede">How it all flows. From the first stirring before dawn, through asana, pranayama, meditation, to the rising of the sun.</p>
+</header>
+
+<article>
+
+<!-- ─── OPENING ─── -->
+<section class="chapter">
+  <p>The hour does not unfold by itself. It must be shaped. The traditional <em>sadhana</em> of Brahma Muhurta is not a single practice but a sequence - each stage preparing the body and mind for the one that follows. Water for the body. Breath for the channels. Posture for the seat. Stillness for the mind.</p>
+
+  <p>What follows is a complete schedule, drawn from the classical hatha and raja yoga traditions. It is offered in three forms - full, abbreviated, and minimal - so that the practice can meet you wherever you stand on the path.</p>
+
+  <p>The total span is one and a half hours, ending precisely as the sun crosses the horizon. The first stirring is in darkness. The closing is in light. Between them, you cross.</p>
+</section>
+
+<!-- ─── PHILOSOPHY ─── -->
+<section class="chapter">
+  <p class="chapter-label">I · The Logic of the Sequence</p>
+  <h2>Why This Order</h2>
+
+  <p>The order is not arbitrary. The sequence works from the gross to the subtle, from the outer to the inner. To reverse it is to attempt meditation in a body that has not yet awakened, with channels that have not yet opened.</p>
+
+  <h3>The Five Sheaths</h3>
+
+  <p>Vedantic teaching describes the human being as five concentric sheaths - <em>panchakosha</em> - each more subtle than the last:</p>
+
+  <ol>
+    <li><em>Annamaya kosha</em> - the physical body, the food sheath. Addressed by hygiene, water, and movement.</li>
+    <li><em>Pranamaya kosha</em> - the vital energy sheath. Addressed by pranayama.</li>
+    <li><em>Manomaya kosha</em> - the mental sheath. Addressed by mantra and concentration.</li>
+    <li><em>Vijnanamaya kosha</em> - the wisdom sheath. Addressed by meditation.</li>
+    <li><em>Anandamaya kosha</em> - the bliss sheath. Revealed when the others have settled.</li>
+  </ol>
+
+  <p>The morning practice moves systematically inward through these layers. Each stage prepares the layer beneath it. To skip a layer is to leave the deeper work resting on an unsteady foundation.</p>
+
+  <div class="pull-quote">First the body. Then the breath. Then the mind. Then the silence that holds them all.</div>
+</section>
+
+<!-- ─── THE FULL SCHEDULE ─── -->
+<section class="chapter">
+  <p class="chapter-label">II · The Sequence</p>
+  <h2>The Full Practice</h2>
+
+  <p>Choose the form that matches the season of your practice. The full sequence requires ninety minutes and is the traditional form. The abbreviated sequence - forty-five minutes - is appropriate when life is dense. The minimal sequence - twenty minutes - is for the early days, and for the days when twenty minutes is what you have.</p>
+
+  <div class="variant-tabs">
+    <button class="variant-tab active" onclick="showVariant(event, 'full')">Full · 90 min</button>
+    <button class="variant-tab" onclick="showVariant(event, 'abbrev')">Abbreviated · 45 min</button>
+    <button class="variant-tab" onclick="showVariant(event, 'minimal')">Minimal · 20 min</button>
+  </div>
+
+  <!-- FULL VARIANT -->
+  <div class="variant-pane active" id="variant-full">
+    <div class="timeline">
+      <p class="timeline-title">The Traditional Form</p>
+      <p class="timeline-sub">Beginning 90 minutes before sunrise · ending at first light</p>
+
+      <div class="timeline-track">
+
+        <div class="stage">
+          <p class="stage-time">−90 min · The Awakening</p>
+          <p class="stage-name">Rising and Hygiene</p>
+          <p class="stage-sanskrit">उत्थान · Utthana</p>
+          <p class="stage-desc">Rise without striking a light. Splash cold water on the face. Clean the tongue with a copper or steel scraper. Drink one glass of warm water, ideally from a copper vessel that has rested overnight. Empty the bladder and bowels.</p>
+          <span class="stage-duration">10 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−80 min · Salutation</p>
+          <p class="stage-name">Surya Namaskar</p>
+          <p class="stage-sanskrit">सूर्य नमस्कार</p>
+          <p class="stage-desc">Twelve rounds of Sun Salutation. Move with the breath. This warms the body, opens the spine, and circulates prana. Not for fitness - for preparation. Each round is a quiet offering to the sun that has not yet risen.</p>
+          <span class="stage-duration">10 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−70 min · Asana</p>
+          <p class="stage-name">Hatha Sequence</p>
+          <p class="stage-sanskrit">आसन</p>
+          <p class="stage-desc">A short sequence of holding postures. Forward fold, spinal twist, shoulder stand or legs-up-the-wall, fish pose, child's pose. Each held for several breaths. The aim is not flexibility but stillness inside movement - and the readying of the spine for long sitting.</p>
+          <span class="stage-duration">15 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−55 min · Cleansing Breath</p>
+          <p class="stage-name">Kapalabhati</p>
+          <p class="stage-sanskrit">कपालभाति</p>
+          <p class="stage-desc">Three rounds of skull-shining breath. Short, sharp exhalations through the nose; passive inhalations. Sixty breaths per round, with rest between. This clears the lungs and lights the inner fire. Approach with care - do not force.</p>
+          <span class="stage-duration">5 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−50 min · Balancing Breath</p>
+          <p class="stage-name">Nadi Shodhana</p>
+          <p class="stage-sanskrit">नाडी शोधन</p>
+          <p class="stage-desc">Alternate nostril breathing. Slow, even rounds - inhale left, exhale right, inhale right, exhale left. Begin without retention. Add retention only when the breath has lengthened naturally. This balances the solar and lunar channels and prepares the mind for stillness.</p>
+          <span class="stage-duration">10 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−40 min · Sacred Sound</p>
+          <p class="stage-name">Mantra Japa</p>
+          <p class="stage-sanskrit">मन्त्र जप</p>
+          <p class="stage-desc">Recitation of a chosen mantra, traditionally on a mala of 108 beads. <em>Om</em>, the Gayatri, the Maha Mrityunjaya, or the name given by your teacher. The sound itself is the practice - let it move from voice, to whisper, to silent repetition in the heart.</p>
+          <span class="stage-duration">10 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−30 min · The Seat</p>
+          <p class="stage-name">Seated Meditation</p>
+          <p class="stage-sanskrit">ध्यान</p>
+          <p class="stage-desc">The longest single segment. The body has been prepared, the breath has been gathered, the mind has been settled by sound. Now: stillness. Sit. Watch the breath. Watch the mind. Rest as awareness.</p>
+          <span class="stage-duration">25 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−5 min · Closing</p>
+          <p class="stage-name">Sankalpa and Salutation</p>
+          <p class="stage-sanskrit">सङ्कल्प</p>
+          <p class="stage-desc">Bring the heartfelt resolve - the Sankalpa - to mind three times. Bow to the lineage that has carried this teaching to you. Bow to the sun now rising. Open the eyes slowly. Carry the silence forward into the day.</p>
+          <span class="stage-duration">5 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">Sunrise · The Threshold</p>
+          <p class="stage-name">The Day Begins</p>
+          <p class="stage-desc">The practice has not ended. The practice now becomes life. Move into the first activities of the day with the same quality of attention that was cultivated in the sit.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ABBREVIATED VARIANT -->
+  <div class="variant-pane" id="variant-abbrev">
+    <div class="timeline">
+      <p class="timeline-title">The Abbreviated Form</p>
+      <p class="timeline-sub">Beginning 45 minutes before sunrise · for working days and dense seasons</p>
+
+      <div class="timeline-track">
+
+        <div class="stage">
+          <p class="stage-time">−45 min · Rising</p>
+          <p class="stage-name">Hygiene and Water</p>
+          <p class="stage-desc">Cold water on the face. Tongue scraped. One glass of warm water. The body is brought online quickly but without violence.</p>
+          <span class="stage-duration">5 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−40 min · Movement</p>
+          <p class="stage-name">Short Asana</p>
+          <p class="stage-desc">Six rounds of Surya Namaskar, followed by three minutes of seated spinal twists and a forward fold. The body is opened without lingering.</p>
+          <span class="stage-duration">10 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−30 min · Breath</p>
+          <p class="stage-name">Nadi Shodhana</p>
+          <p class="stage-desc">Eight rounds of alternate nostril breathing. Slow and unforced. The channels are balanced; the mind begins to settle.</p>
+          <span class="stage-duration">8 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−22 min · The Seat</p>
+          <p class="stage-name">Seated Meditation</p>
+          <p class="stage-desc">The heart of the practice. Twenty minutes of seated stillness. Anchor on the breath, broaden to witnessing, rest in awareness.</p>
+          <span class="stage-duration">20 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−2 min · Closing</p>
+          <p class="stage-name">Sankalpa</p>
+          <p class="stage-desc">Resolve, salutation, and emergence. The day awaits.</p>
+          <span class="stage-duration">2 minutes</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MINIMAL VARIANT -->
+  <div class="variant-pane" id="variant-minimal">
+    <div class="timeline">
+      <p class="timeline-title">The Minimal Form</p>
+      <p class="timeline-sub">Beginning 20 minutes before sunrise · for early practice and difficult mornings</p>
+
+      <div class="timeline-track">
+
+        <div class="stage">
+          <p class="stage-time">−20 min · Rising</p>
+          <p class="stage-name">Water and Stillness</p>
+          <p class="stage-desc">Splash cold water on the face. Drink warm water. Sit on the cushion. That is all the preparation.</p>
+          <span class="stage-duration">3 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−17 min · Breath</p>
+          <p class="stage-name">Nadi Shodhana</p>
+          <p class="stage-desc">Five rounds of alternate nostril breathing. Just enough to clear the channels and steady the breath.</p>
+          <span class="stage-duration">5 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−12 min · The Seat</p>
+          <p class="stage-name">Seated Meditation</p>
+          <p class="stage-desc">Ten minutes of silent sitting. Anchor on the breath. Return when you wander. That is the whole practice.</p>
+          <span class="stage-duration">10 minutes</span>
+        </div>
+
+        <div class="stage">
+          <p class="stage-time">−2 min · Closing</p>
+          <p class="stage-name">Resolve</p>
+          <p class="stage-desc">Sankalpa, three breaths, and the day begins.</p>
+          <span class="stage-duration">2 minutes</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRINCIPLES ─── -->
+<section class="chapter">
+  <p class="chapter-label">III · Holding the Shape</p>
+  <h2>Principles of the Schedule</h2>
+
+  <h3>Begin Where You Can Sustain</h3>
+
+  <p>The greatest mistake of the beginner is to start with the full schedule and abandon it within a month. The greatest wisdom is to start with the minimal form and never miss a day. Consistency is the soil. Length is the harvest. The harvest will come - but only if the soil is tended every morning.</p>
+
+  <h3>Hold the Sequence, Not the Clock</h3>
+
+  <p>The minutes given are guides, not rules. Some mornings the breath will lengthen on its own and pranayama will take longer. Some mornings the seat will fall into stillness quickly. Trust the practice. Hold the shape - water, movement, breath, sit, close - and let the proportions breathe.</p>
+
+  <h3>The Same Hour, The Same Place</h3>
+
+  <p>Choose a corner of your dwelling and consecrate it. A clean rug, a cushion, perhaps a small lamp and a single image of the lineage you trust. Return to this place every morning. The space itself begins to hold the practice - and on the difficult mornings, the room remembers what the practitioner has forgotten.</p>
+
+  <h3>Do Not Eat Before Sitting</h3>
+
+  <p>The morning practice is performed on an empty stomach. The body's energy is then available for inward work rather than digestion. After the closing, the day's first food can be taken - and traditionally, it is taken in silence.</p>
+
+  <blockquote>
+    Yoga is not for one who eats too much, nor for one who eats nothing. Not for one who sleeps too long, nor for one who is constantly awake.
+    <span class="source">Bhagavad Gita 6.16</span>
+  </blockquote>
+</section>
+
+<!-- ─── A NOTE ─── -->
+<section class="chapter">
+  <p class="chapter-label">IV · A Final Note</p>
+  <h2>On the Question of Time</h2>
+
+  <p>Many will say: I do not have ninety minutes. Some will say: I do not have twenty. The teaching's response is not to argue. The teaching's response is to say: <em>sit for five</em>. Five minutes, every morning, before the world wakes. Five minutes is a real practice. Five minutes will, over a year, become twenty. Twenty, over years, will become an hour. An hour, over a life, will become the central fact around which everything else is arranged.</p>
+
+  <p>The schedule above is not a demand. It is a map. You are not required to walk the whole map today. You are required only to take the next step.</p>
+
+  <div class="pull-quote">Begin small. Begin now. Begin tomorrow.</div>
+
+  <div style="text-align: center;">
+    <a href="index.html" class="nav-back">← Return Home</a>
+  </div>
+</section>
+
+</article>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+</footer>
+
+<script>
+function showVariant(e, key) {
+  document.querySelectorAll('.variant-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.variant-pane').forEach(p => p.classList.remove('active'));
+  e.target.classList.add('active');
+  document.getElementById('variant-' + key).classList.add('active');
+}
+</script>
+</body>
+</html>
