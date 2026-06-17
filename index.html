@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brahma Muhurta — The Divine Hour | Sunrise Calculator, Yoga Nidra & Teachings</title>
+<meta name="description" content="Calculate your precise Brahma Muhurta times, practise traditional Yoga Nidra, and study the teachings of the divine hour — Sankalpa, Pranayama, Surya Namaskar, and more. Free. No ads.">
+<meta name="keywords" content="brahma muhurta, brahma muhurta time, brahma muhurta calculator, yoga nidra, sankalpa, pranayama, surya namaskar, vedic morning practice, sunrise calculator, meditation time">
+<link rel="canonical" href="https://brahmamuhurta.ai/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Brahma Muhurta">
+<meta property="og:title" content="Brahma Muhurta — The Divine Hour">
+<meta property="og:description" content="The sacred hour before dawn. Calculate precise times for your location, practise traditional Yoga Nidra, and study the teachings of the divine hour — offered freely, without ads or distraction.">
+<meta property="og:url" content="https://brahmamuhurta.ai/">
+<meta property="og:image" content="https://brahmamuhurta.ai/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Brahma Muhurta — The Divine Hour">
+<meta property="og:locale" content="en_GB">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brahma Muhurta — The Divine Hour">
+<meta name="twitter:description" content="Calculate your precise Brahma Muhurta, practise guided Yoga Nidra, and study the teachings of the divine hour. Free. No ads.">
+<meta name="twitter:image" content="https://brahmamuhurta.ai/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://brahmamuhurta.ai/#website",
+      "url": "https://brahmamuhurta.ai/",
+      "name": "Brahma Muhurta",
+      "description": "The sacred hour before sunrise — precise Brahma Muhurta calculator, monthly calendar, guided Yoga Nidra, and the teachings of the divine hour.",
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://brahmamuhurta.ai/#calculator",
+      "name": "Brahma Muhurta Calculator",
+      "url": "https://brahmamuhurta.ai/#calculator",
+      "description": "Calculate precise Brahma Muhurta times for any location. Returns the 96-minute sacred window beginning 1 hour 36 minutes before sunrise and sunset. Generates a monthly calendar and full-year .ics download.",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Brahma Muhurta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brahma Muhurta is a sacred period in Vedic tradition falling 1 hour and 36 minutes before sunrise. The name means the hour of Brahma. It is considered the most auspicious time for meditation, pranayama, self-study, and prayer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What time is Brahma Muhurta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brahma Muhurta begins 96 minutes before local sunrise and ends 48 minutes before sunrise. Because sunrise shifts daily and by location, use the calculator on this page to find exact times anywhere in the world."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Yoga Nidra?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yoga Nidra is the practice of yogic sleep — a state of conscious deep relaxation in which the body and ordinary mind rest while awareness remains alert. It is traditionally practised during Brahma Muhurta."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ॐ</text></svg>">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#081530">
+<link rel="apple-touch-icon" href="/icon.svg">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Brahma Muhurta">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@300;400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #081530;
+    --surface: #0d1f3d;
+    --gold: #e0c684;
+    --gold-dim: #957a4b;
+    --text: #ebe1cd;
+    --text-dim: #968f7d;
+    --border: rgba(224,198,132,0.15);
+    --glow: rgba(224,198,132,0.08);
+    --surface-hi: #15294e;
+    --gold-bright: #f0d99a;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.8;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Stars background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 15%, rgba(224,198,132,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 25%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 8%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 40%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 70%, rgba(224,198,132,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 85%, rgba(255,255,255,0.1) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(224,198,132,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 55%, rgba(255,255,255,0.08) 0%, transparent 100%),
+      radial-gradient(1px 1px at 5% 35%, rgba(224,198,132,0.2) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(8,21,48,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--text-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    z-index: 1;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; transform: translateX(-50%);
+    width: 1px;
+    height: 80px;
+    background: linear-gradient(to bottom, var(--gold-dim), transparent);
+  }
+
+  .sanskrit {
+    font-family: serif;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    margin-bottom: 1.5rem;
+    animation: fadeUp 1.5s ease both;
+  }
+
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    line-height: 1.2;
+    animation: fadeUp 1.5s ease 0.2s both, shimmer 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Apply shimmer to section titles and the om symbol too */
+  .section-title, .om, footer .om, .benediction .om {
+    background: linear-gradient(110deg, var(--gold) 0%, var(--gold) 25%, var(--gold-bright) 40%, #fff4d0 50%, var(--gold-bright) 60%, var(--gold) 75%, var(--gold) 100%);
+    background-size: 250% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+    animation: shimmer 6s ease-in-out infinite;
+  }
+
+  .hero-sub {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--text-dim);
+    max-width: 480px;
+    margin: 1.5rem auto 0;
+    animation: fadeUp 1.5s ease 0.4s both;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold-dim), transparent);
+    margin: 2rem auto;
+    animation: fadeUp 1.5s ease 0.3s both;
+  }
+
+  /* CALCULATOR SECTION */
+  .section {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    font-weight: 300;
+    color: var(--gold);
+    text-align: center;
+    letter-spacing: 0.08em;
+    margin-bottom: 3rem;
+  }
+
+  /* Calculator card */
+  .calc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .calc-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+    pointer-events: none;
+  }
+
+  .calc-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .calc-field label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.5rem;
+  }
+
+  .calc-field input, .calc-field select {
+    width: 100%;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    padding: 0.7rem 1rem;
+    color: var(--text);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  .calc-field input:focus, .calc-field select:focus {
+    border-color: var(--gold-dim);
+  }
+
+  .calc-field select option { background: #0d1f3d; }
+
+  .btn-locate, .btn-calc {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1px solid var(--gold-dim);
+    border-radius: 1px;
+    padding: 0.8rem 2rem;
+    transition: all 0.3s;
+    background: transparent;
+  }
+
+  .btn-locate {
+    color: var(--text-dim);
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-locate:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(224,198,132,0.05);
+  }
+
+  .btn-calc {
+    color: var(--bg);
+    background: var(--gold);
+    border-color: var(--gold);
+    width: 100%;
+    font-size: 0.7rem;
+    padding: 1rem;
+  }
+
+  .btn-calc:hover {
+    background: #f0d99a;
+  }
+
+  /* Result */
+  .calc-result {
+    display: none;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .calc-result.show { display: block; }
+
+  .result-date {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .result-time {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 300;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    line-height: 1;
+  }
+
+  .result-range {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+  }
+
+  .result-sunrise {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .result-note {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    max-width: 380px;
+    margin: 1.5rem auto 0;
+    line-height: 1.7;
+  }
+
+  .calendar-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  /* Monthly grid */
+  .month-grid {
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .month-day-header {
+    background: var(--bg);
+    padding: 0.5rem 0.25rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    text-align: center;
+  }
+
+  .month-day {
+    background: var(--surface);
+    padding: 0.6rem 0.4rem;
+    min-height: 70px;
+    position: relative;
+  }
+
+  .month-day.empty { background: rgba(8,21,48,0.5); }
+  .month-day.today { background: rgba(224,198,132,0.06); }
+
+  .day-num {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+
+  .month-day.today .day-num { color: var(--gold); }
+
+  .bm-time {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color: var(--text-dim);
+  }
+
+  .bm-time .bm-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.42rem;
+    letter-spacing: 0.15em;
+    display: block;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+  }
+
+  .bm-time.morning .bm-label { color: #e0c68488; }
+  .bm-time.evening .bm-label { color: #6e8fc888; }
+  .bm-time.evening { color: #a8b8cc; }
+
+  @media (max-width: 600px) {
+    .month-grid { grid-template-columns: repeat(7, 1fr); }
+    .month-day { min-height: 55px; padding: 0.4rem 0.2rem; }
+    .bm-time { font-size: 0.6rem; }
+    .bm-time .bm-label { display: none; }
+  }
+
+  .btn-calendar {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    padding: 0.65rem 1.25rem;
+    color: var(--text-dim);
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .btn-calendar:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(224,198,132,0.05);
+  }
+
+  /* YOGA NIDRA */
+  .yn-section {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .yn-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-yn {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    padding: 0.6rem 1.5rem;
+    color: var(--text-dim);
+    transition: all 0.3s;
+  }
+
+  .btn-yn:hover, .btn-yn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .btn-yn-play {
+    background: rgba(224,198,132,0.1);
+    border-color: var(--gold-dim);
+    color: var(--gold);
+  }
+
+  .btn-yn-play:hover {
+    background: rgba(224,198,132,0.2);
+  }
+
+  /* Script display */
+  .yn-script {
+    position: relative;
+  }
+
+  .yn-stage {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 3rem;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .yn-stage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 100%, var(--glow), transparent 60%);
+    pointer-events: none;
+  }
+
+  .yn-current-text {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+    color: var(--text);
+    text-align: center;
+    line-height: 1.9;
+    max-width: 600px;
+    transition: opacity 0.6s ease;
+  }
+
+  .yn-phase-label {
+    position: absolute;
+    top: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .yn-progress {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .yn-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--border);
+    transition: background 0.4s;
+    cursor: pointer;
+  }
+
+  .yn-dot.active { background: var(--gold); }
+  .yn-dot.done { background: var(--gold-dim); }
+
+  .yn-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .btn-step {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn-step:hover { color: var(--gold); }
+
+  .yn-counter {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--gold-dim);
+  }
+
+  /* Full script view */
+  .yn-full {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 3rem;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+
+  .yn-full.show { display: block; }
+
+  .yn-full::-webkit-scrollbar { width: 4px; }
+  .yn-full::-webkit-scrollbar-track { background: transparent; }
+  .yn-full::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+  .yn-passage {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(224,198,132,0.08);
+  }
+
+  .yn-passage:last-child { border-bottom: none; margin-bottom: 0; }
+
+  .yn-passage-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .yn-passage p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text);
+  }
+
+  /* ABOUT / MISSION */
+  .info-section {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 5rem 2rem;
+  }
+
+  .info-grid {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: start;
+    gap: 3rem;
+  }
+
+  .info-block h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .info-block p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text-dim);
+  }
+
+  .rules-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .rules-list li {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-dim);
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(224,198,132,0.06);
+    padding-left: 1rem;
+    position: relative;
+  }
+
+  .rules-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--gold-dim);
+    font-style: normal;
+  }
+
+  /* FOOTER */
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 2.5rem 2rem;
+  }
+
+  footer p {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-dim);
+    text-transform: uppercase;
+  }
+
+  .om {
+    font-size: 1.5rem;
+    color: var(--gold-dim);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* SPEAKING highlight */
+  .speaking { color: var(--gold) !important; }
+
+  /* PAUSE indicator */
+  .pause-indicator {
+    display: none;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.35em;
+    color: var(--gold-dim);
+    text-transform: uppercase;
+    animation: pulse 2s infinite;
+  }
+
+  .pause-indicator.show { display: block; }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  .voice-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .voice-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+
+  .btn-voice {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 1px;
+    padding: 0.4rem 1rem;
+    color: var(--text-dim);
+    transition: all 0.3s;
+  }
+
+  .btn-voice.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(224,198,132,0.08);
+  }
+
+  .btn-voice:hover { border-color: var(--gold-dim); color: var(--text); }
+
+  footer .install-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.3em;
+    color: var(--gold-dim);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+  }
+
+  footer .install-link:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold-dim);
+  }
+
+  @media (max-width: 850px) {
+    nav { padding: 1rem 1.25rem; }
+    .nav-links { gap: 1.1rem; }
+    .nav-links a { font-size: 0.58rem; letter-spacing: 0.18em; }
+    .calc-row { grid-template-columns: 1fr; }
+    .calc-card, .yn-stage, .yn-full { padding: 1.75rem; }
+  }
+
+  @media (max-width: 650px) {
+    .info-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">Brahma Muhurta</a>
+  <ul class="nav-links">
+    <li><a href="#calculator">The Hour</a></li>
+    <li><a href="#yoga-nidra">Yoga Nidra</a></li>
+    <li><a href="/teachings/">Teachings</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="sanskrit">ब्रह्म मुहूर्त</p>
+  <div class="divider"></div>
+  <h1>The Divine Hour</h1>
+  <p class="hero-sub">The hour before dawn, when the veil between worlds is thinnest. When the mind is clear, the air is pure, and the self is closest to its source.</p>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section" id="calculator">
+  <p class="section-label">Find Your Sacred Times</p>
+  <h2 class="section-title">Monthly Brahma Muhurta</h2>
+
+  <div class="calc-card">
+    <button class="btn-locate" onclick="locateMe()">⊕ &nbsp;Use My Location</button>
+
+    <div class="calc-row">
+      <div class="calc-field">
+        <label>Latitude</label>
+        <input type="number" id="lat" placeholder="e.g. 51.5074" step="0.0001">
+      </div>
+      <div class="calc-field">
+        <label>Longitude</label>
+        <input type="number" id="lng" placeholder="e.g. -0.1278" step="0.0001">
+      </div>
+    </div>
+
+    <div class="calc-row">
+      <div class="calc-field">
+        <label>Month</label>
+        <select id="calcMonth">
+          <option value="0">January</option><option value="1">February</option>
+          <option value="2">March</option><option value="3">April</option>
+          <option value="4">May</option><option value="5">June</option>
+          <option value="6">July</option><option value="7">August</option>
+          <option value="8">September</option><option value="9">October</option>
+          <option value="10">November</option><option value="11">December</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label>Year</label>
+        <input type="number" id="calcYear" placeholder="2026" min="2020" max="2099">
+      </div>
+    </div>
+
+    <button class="btn-calc" onclick="calculate()">Generate Monthly Calendar</button>
+
+    <div class="calc-result" id="result">
+      <p class="result-date" id="resultDate"></p>
+      <p class="result-note">Both morning and evening Brahma Muhurta times are shown. Morning begins 1hr 36min before sunrise. Evening begins 1hr 36min before sunset.</p>
+
+      <div class="month-grid" id="monthGrid"></div>
+
+      <div class="calendar-buttons">
+        <button class="btn-calendar" onclick="addToApple('morning')">+ Morning - Full Year (Apple / Outlook)</button>
+        <button class="btn-calendar" onclick="addToApple('evening')">+ Evening - Full Year (Apple / Outlook)</button>
+        <button class="btn-calendar" onclick="addToGoogle('morning')">+ Morning - Google</button>
+        <button class="btn-calendar" onclick="addToGoogle('evening')">+ Evening - Google</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOGA NIDRA -->
+<section class="yn-section" id="yoga-nidra">
+  <p class="section-label">Traditional Practice</p>
+  <h2 class="section-title">Yoga Nidra</h2>
+
+  <div class="yn-controls">
+    <button class="btn-yn btn-yn-play" id="btnPlay" onclick="togglePlay()">▶ &nbsp;Begin Guided Practice</button>
+    <button class="btn-yn" onclick="toggleView()">Read Full Script</button>
+    <button class="btn-yn" id="btnPause" onclick="pauseResume()" style="display:none">⏸ Pause</button>
+  </div>
+
+  <div class="voice-select">
+    <span class="voice-label">Voice</span>
+    <button class="btn-voice active" id="voiceFemale" onclick="setVoice('female')">Female</button>
+    <button class="btn-voice" id="voiceMale" onclick="setVoice('male')">Male</button>
+  </div>
+
+  <div class="yn-script">
+    <div class="yn-stage">
+      <span class="yn-phase-label" id="phaseLabel">Preparation</span>
+      <p class="yn-current-text" id="ynText">Press Begin to start your practice, or read the full script below.</p>
+      <span class="pause-indicator" id="pauseIndicator">∿ &nbsp;pause &nbsp;∿</span>
+    </div>
+
+    <div class="yn-progress" id="ynProgress"></div>
+
+    <div class="yn-nav">
+      <button class="btn-step" onclick="stepBack()">← Previous</button>
+      <span class="yn-counter" id="ynCounter">-</span>
+      <button class="btn-step" onclick="stepForward()">Next →</button>
+    </div>
+  </div>
+
+  <div class="yn-full" id="ynFull"></div>
+</section>
+
+<!-- ABOUT / MISSION / RULES -->
+<section class="info-section" id="about">
+  <div class="info-grid">
+    <div class="info-block">
+      <h3>About</h3>
+      <p>Brahma Muhurta - literally the hour of Brahma - falls one and a half hours before sunrise. Ancient Vedic tradition holds this to be the most auspicious time for spiritual practice: meditation, pranayama, self-study, and prayer.<br><br>This site exists as a quiet companion for those who rise before the world wakes.</p>
+    </div>
+    <div class="info-block">
+      <h3>Mission</h3>
+      <p>To make the ancient teaching of Brahma Muhurta accessible, precise, and alive - not as a relic but as a living practice.<br><br>To offer the Yoga Nidra tradition in its full depth, freely, without commercialisation or distraction.<br><br>To hold this hour as sacred.</p>
+    </div>
+    <div class="info-block">
+      <h3>Governing Principles</h3>
+      <ul class="rules-list">
+        <li>No advertising. No sponsorship. No profit motive.</li>
+        <li>The teachings are offered as they were given - freely.</li>
+        <li>Accuracy matters. Times are calculated, not estimated.</li>
+        <li>This is a place of stillness. No notifications, no gamification.</li>
+        <li>The Yoga Nidra tradition is honoured in its full depth and integrity.</li>
+        <li>Content will not be diluted to suit modern attention spans.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="om">ॐ</span>
+  <p>Brahma Muhurta &nbsp;·&nbsp; The Divine Hour &nbsp;·&nbsp; brahmamuhurta.ai</p>
+  <a href="/install" class="install-link">Install on your device</a>
+</footer>
+
+<script>
+// ─── SUNRISE CALCULATION ───────────────────────────────────────────────
+function toRad(d) { return d * Math.PI / 180; }
+function toDeg(r) { return r * 180 / Math.PI; }
+
+function getSunrise(lat, lng, date) {
+  const D2R = Math.PI / 180;
+  const R2D = 180 / Math.PI;
+  const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 86400000);
+  const B = (360 / 365) * (dayOfYear - 81) * D2R;
+  const EqT = 9.87 * Math.sin(2 * B) - 7.53 * Math.cos(B) - 1.5 * Math.sin(B);
+  const decl = 23.45 * Math.sin(B) * D2R;
+  const HA = Math.acos(-Math.tan(lat * D2R) * Math.tan(decl)) * R2D;
+  const TC = 4 * (lng) + EqT;
+  const sunriseLocal = 720 - 4 * HA - TC; // minutes from midnight UTC
+  return sunriseLocal; // minutes from midnight UTC
+}
+
+function locateMe() {
+  if (!navigator.geolocation) { alert('Geolocation not supported in your browser.'); return; }
+  navigator.geolocation.getCurrentPosition(pos => {
+    document.getElementById('lat').value = pos.coords.latitude.toFixed(4);
+    document.getElementById('lng').value = pos.coords.longitude.toFixed(4);
+  }, () => alert('Location access denied. Please enter coordinates manually.'));
+}
+
+function fmt(min) {
+  min = ((min % 1440) + 1440) % 1440;
+  const h = Math.floor(min / 60);
+  const m = Math.floor(min % 60);
+  const ampm = h < 12 ? 'AM' : 'PM';
+  const h12 = h === 0 ? 12 : h > 12 ? h - 12 : h;
+  return `${h12}:${m.toString().padStart(2,'0')} ${ampm}`;
+}
+
+function getSunset(lat, lng, date) {
+  const D2R = Math.PI / 180;
+  const R2D = 180 / Math.PI;
+  const dayOfYear = Math.floor((date - new Date(date.getFullYear(), 0, 0)) / 86400000);
+  const B = (360 / 365) * (dayOfYear - 81) * D2R;
+  const EqT = 9.87 * Math.sin(2 * B) - 7.53 * Math.cos(B) - 1.5 * Math.sin(B);
+  const decl = 23.45 * Math.sin(B) * D2R;
+  const HA = Math.acos(-Math.tan(lat * D2R) * Math.tan(decl)) * R2D;
+  const TC = 4 * lng + EqT;
+  return 720 + 4 * HA - TC; // sunset in minutes from midnight UTC
+}
+
+function calculate() {
+  const lat = parseFloat(document.getElementById('lat').value);
+  const lng = parseFloat(document.getElementById('lng').value);
+  const monthSel = parseInt(document.getElementById('calcMonth').value);
+  const yearSel = parseInt(document.getElementById('calcYear').value) || new Date().getFullYear();
+
+  if (isNaN(lat) || isNaN(lng)) { alert('Please enter your coordinates or use the location button.'); return; }
+
+  const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const today = new Date();
+  const daysInMonth = new Date(yearSel, monthSel + 1, 0).getDate();
+  const firstDayOfWeek = new Date(yearSel, monthSel, 1).getDay();
+  const offset = -today.getTimezoneOffset();
+
+  // Build monthly data
+  window._monthData = [];
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = new Date(yearSel, monthSel, d);
+    const sunrise = getSunrise(lat, lng, date) + offset;
+    const sunset = getSunset(lat, lng, date) + offset;
+    window._monthData.push({
+      date,
+      mStart: sunrise - 96, mEnd: sunrise - 48,
+      eStart: sunset - 96,  eEnd: sunset - 48,
+      sunrise, sunset
+    });
+  }
+
+  document.getElementById('resultDate').textContent =
+    `${monthNames[monthSel]} ${yearSel}`;
+
+  // Build calendar grid
+  const grid = document.getElementById('monthGrid');
+  grid.innerHTML = '';
+  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  dayNames.forEach(d => {
+    const h = document.createElement('div');
+    h.className = 'month-day-header';
+    h.textContent = d;
+    grid.appendChild(h);
+  });
+
+  // Empty cells before first day
+  for (let i = 0; i < firstDayOfWeek; i++) {
+    const empty = document.createElement('div');
+    empty.className = 'month-day empty';
+    grid.appendChild(empty);
+  }
+
+  window._monthData.forEach(({ date, mStart, eStart }) => {
+    const isToday = date.toDateString() === today.toDateString();
+    const cell = document.createElement('div');
+    cell.className = 'month-day' + (isToday ? ' today' : '');
+
+    const num = document.createElement('span');
+    num.className = 'day-num';
+    num.textContent = date.getDate();
+    cell.appendChild(num);
+
+    const mTime = document.createElement('span');
+    mTime.className = 'bm-time morning';
+    mTime.innerHTML = `<span class="bm-label">Morning</span>${fmt(mStart)}`;
+    cell.appendChild(mTime);
+
+    const eTime = document.createElement('span');
+    eTime.className = 'bm-time evening';
+    eTime.innerHTML = `<span class="bm-label">Evening</span>${fmt(eStart)}`;
+    cell.appendChild(eTime);
+
+    grid.appendChild(cell);
+  });
+
+  const el = document.getElementById('result');
+  el.classList.add('show');
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function toICSDate(d) {
+  return d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+}
+
+function calendarTime(minutesFromMidnight, date) {
+  const d = new Date(date);
+  const mins = ((minutesFromMidnight % 1440) + 1440) % 1440;
+  d.setHours(Math.floor(mins / 60), Math.floor(mins % 60), 0, 0);
+  return d;
+}
+
+function buildYearData(lat, lng, year) {
+  // Build 365/366 days of precise times for the full year
+  const offset = -new Date().getTimezoneOffset();
+  const data = [];
+  const start = new Date(year, 0, 1);
+  const end = new Date(year + 1, 0, 1);
+  for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
+    const date = new Date(d);
+    const sunrise = getSunrise(lat, lng, date) + offset;
+    const sunset  = getSunset(lat, lng, date) + offset;
+    data.push({
+      date: new Date(date),
+      mStart: sunrise - 96, mEnd: sunrise - 48,
+      eStart: sunset  - 96, eEnd: sunset  - 48,
+    });
+  }
+  return data;
+}
+
+function addToApple(type) {
+  const lat = parseFloat(document.getElementById('lat').value);
+  const lng = parseFloat(document.getElementById('lng').value);
+  const year = parseInt(document.getElementById('calcYear').value) || new Date().getFullYear();
+  if (isNaN(lat) || isNaN(lng)) { alert('Please calculate first.'); return; }
+
+  const isEvening = type === 'evening';
+  const yearData = buildYearData(lat, lng, year);
+
+  const lines = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//brahmamuhurta.ai//EN',
+    'CALSCALE:GREGORIAN',
+  ];
+
+  yearData.forEach(({ date, mStart, mEnd, eStart, eEnd }) => {
+    const start = calendarTime(isEvening ? eStart : mStart, date);
+    const end   = calendarTime(isEvening ? eEnd   : mEnd,   date);
+    const dateStr = date.toISOString().split('T')[0];
+    const uid = `bm-${type}-${dateStr}@brahmamuhurta.ai`;
+    lines.push(
+      'BEGIN:VEVENT',
+      `UID:${uid}`,
+      `DTSTART:${toICSDate(start)}`,
+      `DTEND:${toICSDate(end)}`,
+      `SUMMARY:Brahma Muhurta - ${isEvening ? 'Evening' : 'Morning'}`,
+      `DESCRIPTION:${isEvening ? 'Evening sacred hour before sunset.' : 'Morning sacred hour before sunrise. Arise in silence.'}`,
+      'END:VEVENT'
+    );
+  });
+
+  lines.push('END:VCALENDAR');
+  const blob = new Blob([lines.join('\r\n')], { type: 'text/calendar' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `brahma-muhurta-${type}-${year}.ics`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function addToGoogle(type) {
+  // Google Calendar URL only supports single events - open first day of selected month
+  // with a note to use the .ics for full year precision
+  const lat = parseFloat(document.getElementById('lat').value);
+  const lng = parseFloat(document.getElementById('lng').value);
+  const year = parseInt(document.getElementById('calcYear').value) || new Date().getFullYear();
+  const month = parseInt(document.getElementById('calcMonth').value);
+  if (isNaN(lat) || isNaN(lng)) { alert('Please calculate first.'); return; }
+
+  const isEvening = type === 'evening';
+  const offset = -new Date().getTimezoneOffset();
+  const date = new Date(year, month, 1);
+  const sunrise = getSunrise(lat, lng, date) + offset;
+  const sunset  = getSunset(lat, lng, date)  + offset;
+  const minsStart = isEvening ? sunset  - 96 : sunrise - 96;
+  const minsEnd   = isEvening ? sunset  - 48 : sunrise - 48;
+  const start = calendarTime(minsStart, date);
+  const end   = calendarTime(minsEnd,   date);
+  const f = d => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+  const url = `https://calendar.google.com/calendar/render?action=TEMPLATE`
+    + `&text=Brahma+Muhurta+-+${isEvening ? 'Evening' : 'Morning'}`
+    + `&dates=${f(start)}/${f(end)}`
+    + `&details=For+precise+daily+times+that+shift+with+sunrise%2C+use+the+.ics+download+from+brahmamuhurta.ai`;
+  window.open(url, '_blank');
+}
+
+// Set today's date
+(function() {
+  const d = new Date();
+  document.getElementById('calcMonth').value = d.getMonth();
+  document.getElementById('calcYear').value = d.getFullYear();
+})();
+
+// ─── YOGA NIDRA SCRIPT (25 segments) ──────────────────────────────────
+const ynScript = [
+  { phase: "Invocation", pause: 3, text: "Asato ma sad gamaya. Tamaso ma jyotir gamaya. Mrityor ma amritam gamaya. From the unreal, lead me to the real. From darkness, lead me to light. From death, lead me to immortality. Hari Om." },
+  { phase: "Settling", pause: 3, text: "Come now into stillness. Lie in Shavasana - the posture of conscious surrender. Allow your body to melt completely into the earth beneath you. Let your feet fall open naturally. Your arms rest a little away from your body, palms open to the sky. Gently… close your eyes." },
+  { phase: "Preparation", pause: 4, text: "You are about to enter the practice of Yoga Nidra. A state of conscious deep sleep. You will descend into profound stillness… and yet remain awake. Aware. Witnessing. Make no movement from this point forward. The body is now offered to the earth. Make this resolve within yourself: I will not sleep. I am awareness itself." },
+  { phase: "Breath Awareness", pause: 4, text: "Become aware of your breath. Feel it moving… between your navel and your throat. Rising… and falling. Simply witness the breath. You are not breathing. Breathing… is happening." },
+  { phase: "Sankalpa", pause: 6, text: "Now bring your Sankalpa to the surface of your mind. Your heartfelt resolve. Your deepest intention. A Sankalpa is a seed - planted now in the most fertile ground your mind will ever offer. State it mentally… three times… with complete feeling… with complete conviction. Plant it deeply. And release it." },
+  { phase: "Rotation Introduction", pause: 2, text: "We now begin the rotation of consciousness through the body. Move your awareness swiftly from part to part as each is named. Do not move the body. Simply… touch each part with your awareness… and move on. Like light moving across still water." },
+  { phase: "Right Side", pause: 2, text: "Right hand thumb. Index finger. Middle finger. Ring finger. Little finger. Palm of the right hand. Back of the hand. Wrist. Forearm. Elbow. Upper arm. Shoulder. Armpit. Right side of the chest. Right side of the waist. Right hip. Right thigh. Kneecap. Calf muscle. Ankle. Heel. Sole of the foot. Top of the foot. Right big toe… second toe… third toe… fourth toe… fifth toe." },
+  { phase: "Left Side", pause: 2, text: "Left hand thumb. Index finger. Middle finger. Ring finger. Little finger. Palm of the left hand. Back of the hand. Wrist. Forearm. Elbow. Upper arm. Shoulder. Armpit. Left side of the chest. Left side of the waist. Left hip. Left thigh. Kneecap. Calf muscle. Ankle. Heel. Sole of the foot. Top of the foot. Left big toe… second toe… third toe… fourth toe… fifth toe." },
+  { phase: "Back Body", pause: 3, text: "Bring your awareness now to the back of your body. Shoulder blades. The long column of the spine. The buttocks resting on the earth. Your whole back… together… heavy… surrendered… at rest." },
+  { phase: "Front Body", pause: 3, text: "Top of the head. Forehead. Temples. Eyebrows. The space between the eyebrows - the ajna, the seat of inner vision. Eyelids. Eyes. Ears. Cheeks. Nose. The tip of the nose. Lips. Chin. Throat. Right side of the chest. Left side of the chest. Navel. Abdomen. The whole front of the body… open… receiving." },
+  { phase: "Whole Body", pause: 4, text: "The entire right leg. The entire left leg. Both legs together. The entire right arm. The entire left arm. Both arms together. The whole body. Become aware of the points where your body meets the earth. Every place of contact… an offering… a surrender." },
+  { phase: "Stay Awake", pause: 3, text: "Do not sleep. Say to yourself inwardly - I am awake. I am practicing Yoga Nidra. I am awareness. I am the witness." },
+  { phase: "Witness the Body", pause: 4, text: "Now… see your body from the outside. As though you are hovering just above it. Look at this body lying on the floor… as an object… still… silent… like a reflection in a mirror. You are not the body. You are the one… who is watching." },
+  { phase: "The Well", pause: 5, text: "Imagine a well. Ancient. Deep. Dark. You stand at its edge and look down into the darkness below. A bucket hangs on a chain. You lower it… slowly… down into the darkness. It descends beyond sight. Into the deep. Now… slowly… draw it back. Up through the darkness. Into the light. What did it bring from the depths?" },
+  { phase: "Witness the Mind", pause: 4, text: "Ask yourself now… what am I thinking? Do not think. Simply become aware… of the thinking. Watch the thoughts arise… and dissolve… like ripples on still water. You are not the thought. You are the stillness… in which thoughts appear." },
+  { phase: "Lightness / Heaviness", pause: 4, text: "Awaken the feeling of lightness. Your body is made of cotton… of cloud… of moonlight. It floats… drifts… rises away from the earth. Now awaken the feeling of heaviness. Your body is stone. Lead. Ancient rock pressing into the earth. Sinking… heavy… dense." },
+  { phase: "Heat / Cold", pause: 4, text: "Awaken the sensation of heat. Warmth spreading through every cell… every fibre. Your whole body… radiant with heat. Now experience cold. A deep, penetrating cold moving through you. Ice. Snow. The cold before dawn." },
+  { phase: "Pain / Pleasure", pause: 4, text: "Bring to mind the memory of pain. Physical… or emotional. Allow it to surface… witness it… without becoming it. Now bring the feeling of pleasure. A memory of deep joy. Of warmth. Of being completely, utterly at ease. Relive it. Make it vivid. And now… release both. Neither grasping… nor avoiding. Simply… the witness." },
+  { phase: "Visualisation Introduction", pause: 2, text: "Now we enter the realm of rapid visualisation. Images will arise on the screen of your mind - your chidakasha - the luminous inner sky. Witness each one as it appears. Do not hold it. Do not analyse it. Simply… see." },
+  { phase: "Visualisation Sequence", pause: 4, text: "A flickering candle flame. A tall palm tree. A car moving along an empty road. Yellow clouds. Blue clouds. A sky full of stars. The full moon. A dog standing still. A cat at rest. An elephant moving slowly through forest. A horse in full gallop. The sun rising behind mountains. The sun setting behind mountains. The ocean… waves rolling in. A vast lake, crystal clear, perfectly still. A blue lotus. A white lotus. A pink lotus. A boat drifting on still water… ripples spreading. Chimney smoke rising slowly from an old stone house. The first light of dawn. A yogi… seated in deep meditation." },
+  { phase: "Pure Awareness", pause: 5, text: "Become now… a witness of awareness itself. Not the body. Not the senses. Not the mind. Nothing… but awareness. Become aware… that you are observing yourself. Look within… and find the one who is looking. Tat tvam asi. That… thou art." },
+  { phase: "Chidakasha", pause: 5, text: "Go now into chidakasha. The infinite space… behind your forehead. The inner sky. It is vast. It is luminous. It is yours. Within the chidakasha… there is a flame. Find it. And at the centre of that flame… a small golden egg. Bright. Shimmering. Ancient beyond measure. This is the atman. This is what you are… beneath everything you believe yourself to be." },
+  { phase: "Final Sankalpa", pause: 6, text: "Return now to your Sankalpa. Bring it to the surface of your mind with great feeling. The unconscious is wide open. The seed finds deep soil here. State your resolve… three times… with total sincerity. It is done. It is already unfolding." },
+  { phase: "Return", pause: 3, text: "Begin now to draw your awareness outward. Become aware of your natural breath… rising and falling. Become aware of your body resting on the floor. The weight of it. The warmth of it. Become aware of the room around you. The sounds of the world… returning. Lie quietly. Eyes remain closed. Begin to move… gently… slowly. Stretch your fingers. Your toes. A gentle, unhurried return." },
+  { phase: "Closing Mantra", pause: 5, text: "When you are ready… take a deep breath. Hari Om Tat Sat. The practice of Yoga Nidra is complete. May your awareness remain steady… throughout this divine hour. May the peace you have found here… extend into all moments of your life. And may what comes through… be luminous. Hari Om." }
+];
+
+// Build progress dots
+const prog = document.getElementById('ynProgress');
+ynScript.forEach((_, i) => {
+  const d = document.createElement('div');
+  d.className = 'yn-dot';
+  d.onclick = () => goTo(i);
+  prog.appendChild(d);
+});
+
+let currentIdx = 0;
+let isPlaying = false;
+let isPaused = false;
+let pauseTimeout = null;
+let stopRequested = false;
+let currentAudio = null;
+let voicePreference = 'female';
+
+function setVoice(pref) {
+  voicePreference = pref;
+  document.getElementById('voiceFemale').classList.toggle('active', pref === 'female');
+  document.getElementById('voiceMale').classList.toggle('active', pref === 'male');
+}
+
+function updateDisplay(idx) {
+  const item = ynScript[idx];
+  const textEl = document.getElementById('ynText');
+  textEl.style.opacity = 0;
+  setTimeout(() => {
+    document.getElementById('phaseLabel').textContent = item.phase;
+    textEl.textContent = item.text;
+    textEl.style.opacity = 1;
+    document.getElementById('ynCounter').textContent = `${idx + 1} / ${ynScript.length}`;
+  }, 300);
+  document.querySelectorAll('.yn-dot').forEach((d, i) => {
+    d.className = 'yn-dot' + (i === idx ? ' active' : i < idx ? ' done' : '');
+  });
+}
+
+function goTo(idx) {
+  if (idx < 0 || idx >= ynScript.length) return;
+  currentIdx = idx;
+  updateDisplay(idx);
+}
+
+function stepForward() { goTo(currentIdx + 1); }
+function stepBack() { goTo(currentIdx - 1); }
+
+function toggleView() {
+  const full = document.getElementById('ynFull');
+  if (full.classList.contains('show')) { full.classList.remove('show'); return; }
+  full.innerHTML = '';
+  let lastPhase = '';
+  ynScript.forEach(item => {
+    if (item.phase !== lastPhase) {
+      lastPhase = item.phase;
+      const label = document.createElement('div');
+      label.className = 'yn-passage-label';
+      label.textContent = item.phase;
+      full.appendChild(label);
+    }
+    const div = document.createElement('div');
+    div.className = 'yn-passage';
+    const p = document.createElement('p');
+    p.textContent = item.text;
+    div.appendChild(p);
+    full.appendChild(div);
+  });
+  full.classList.add('show');
+}
+
+function togglePlay() {
+  if (isPlaying) { stopPlay(); } else { startPlay(); }
+}
+
+function startPlay() {
+  isPlaying = true;
+  isPaused = false;
+  stopRequested = false;
+  document.getElementById('btnPlay').textContent = '■  Stop';
+  document.getElementById('btnPause').style.display = 'inline-block';
+
+  // Use a single audio element across all segments. On iOS Safari, the
+  // user gesture (tapping Begin) authorises this specific element to play.
+  // Subsequent src swaps continue to work because it's the same element.
+  if (!currentAudio) {
+    currentAudio = new Audio();
+    currentAudio.preload = 'auto';
+  }
+
+  runSession();
+}
+
+function stopPlay() {
+  isPlaying = false;
+  isPaused = false;
+  stopRequested = true;
+  clearTimeout(pauseTimeout);
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.onended = null;
+    currentAudio.onerror = null;
+  }
+  document.getElementById('btnPlay').textContent = '▶ \u00A0Begin Guided Practice';
+  document.getElementById('btnPause').style.display = 'none';
+  document.getElementById('pauseIndicator').classList.remove('show');
+}
+
+function pauseResume() {
+  if (isPaused) {
+    isPaused = false;
+    document.getElementById('btnPause').textContent = '⏸ Pause';
+    if (currentAudio) currentAudio.play();
+  } else {
+    isPaused = true;
+    document.getElementById('btnPause').textContent = '▶ Resume';
+    if (currentAudio) currentAudio.pause();
+  }
+}
+
+
+function playAudioFile(src, pauseSeconds) {
+  return new Promise((resolve) => {
+    if (stopRequested) { resolve(); return; }
+    if (!currentAudio) { resolve(); return; }
+
+    let resolved = false;
+    const safeResolve = () => {
+      if (resolved) return;
+      resolved = true;
+      currentAudio.onended = null;
+      currentAudio.onerror = null;
+      resolve();
+    };
+
+    currentAudio.src = src;
+
+    currentAudio.onended = () => {
+      if (stopRequested) { safeResolve(); return; }
+      document.getElementById('pauseIndicator').classList.add('show');
+      pauseTimeout = setTimeout(() => {
+        document.getElementById('pauseIndicator').classList.remove('show');
+        safeResolve();
+      }, pauseSeconds * 1000);
+    };
+
+    currentAudio.onerror = () => {
+      if (resolved) return;
+      // Only treat as a real failure if MediaError actually exists.
+      if (!currentAudio.error) return;
+      const textEl = document.getElementById('ynText');
+      textEl.style.opacity = 0;
+      setTimeout(() => {
+        textEl.innerHTML = 'Audio is temporarily unavailable. Please use <em>Read Full Script</em> below, or try again shortly.';
+        textEl.style.opacity = 1;
+      }, 300);
+      stopRequested = true;
+      stopPlay();
+      safeResolve();
+    };
+
+    currentAudio.play().catch(() => {
+      // If play() rejects, wait briefly for onended/onerror; fail open if neither fires.
+      setTimeout(() => { if (!resolved) safeResolve(); }, 3000);
+    });
+  });
+}
+
+function padNum(n) { return n.toString().padStart(2, '0'); }
+
+async function runSession() {
+  for (let i = currentIdx; i < ynScript.length; i++) {
+    if (stopRequested) break;
+    currentIdx = i;
+    updateDisplay(i);
+
+    const item = ynScript[i];
+    const prefix = voicePreference === 'male' ? 'm' : 'f';
+    const src = `/audio/${prefix}_${padNum(i + 1)}.mp3`;
+
+    await playAudioFile(src, item.pause);
+  }
+
+  if (!stopRequested) stopPlay();
+}
+
+// Init
+updateDisplay(0);
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(err => console.warn('SW registration failed:', err));
+  });
+}
+</script>
+</body>
+</html>
